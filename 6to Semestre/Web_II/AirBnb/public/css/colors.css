@@ -1,0 +1,35 @@
+.primary-color {
+    color: #FF385C !important;
+}
+
+.primary-bg {
+    background-color: #FF385C !important;
+}
+
+.primary-border{
+    border: solid 1px #FF385C !important;
+}
+
+.primary-variant-color {
+    color: #150D48 !important;
+}
+
+.primary-variant-bg{
+    background-color: #150D48 !important;
+}
+
+.secondary-color {
+    color: #7156E5 !important;
+}
+
+.secondary-bg {
+    background-color: #7156E5 !important;
+}
+
+.secondary-border{
+    border: solid 1px #7156E5 !important;
+}
+
+.primary-border-bottom{
+    border-bottom: solid 1px #FF385C !important;
+}

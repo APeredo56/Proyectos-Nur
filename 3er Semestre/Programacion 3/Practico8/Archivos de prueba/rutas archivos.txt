@@ -1,0 +1,6 @@
+C:\Users\USUARIO\IdeaProjects\Practico6\Archivos de prueba\hola.txt
+C:\Users\USUARIO\IdeaProjects\Practico6\Archivos de prueba\problema barbero.pdf
+C:\Users\USUARIO\IdeaProjects\Practico6\Archivos de prueba\Clase 8.pptx
+C:\Users\USUARIO\IdeaProjects\Practico6\Archivos de prueba\Plantilla libro diario.xlsx
+C:\Users\USUARIO\IdeaProjects\Practico6\Archivos de prueba\Minimundo heladeria.docx
+C:\Users\USUARIO\IdeaProjects\Practico6\Archivos de prueba\prueba.txt

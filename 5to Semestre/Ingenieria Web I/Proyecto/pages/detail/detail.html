@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="detail.css">
+    <title>Aris</title>
+</head>
+<body>
+    <header>
+        <nav class="nav__bar">
+            <div class="header__wrapper">
+                <a href="../../index.html">
+                    <img src="../../img/logo.png" alt="Logo" id="header__logo">
+                </a>
+                <div class="search__bar__container">
+                    <form action="" method="get">
+                        <input type="search" name="search" class="header__search__bar" placeholder="Buscar">
+                        <button type="submit" class="header__search__submit">
+                            <img src="../../img/search.png" alt="Buscar" id="search__bar__button__img">
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="menu__container">
+                <ul class="menu">
+                    <li class="menu__switch__button menu__item">
+                        <label for="menu-mobile-switch" class="menu-mobile-switch">
+                            <i class="fa-solid fa-bars"></i>
+                        </label>
+                        <input type="checkbox" id="menu-mobile-switch" class="menu-mobile-switch__checkbox">
+                    </li>
+                    <li class="menu__item" id="header__category__dropdown__container">
+                        <p>Categorias <i class="fa-solid fa-angle-down"></i></p>
+                        <ul class="header__categories__list"></ul>
+                    </li>
+                    <li class="menu__item" id="account__menu__container"><a href="../../pages/login/login.html">Iniciar Sesión</a></li>
+                    <li class="menu__item"><a href="../../pages/cart/cart.html" id="nav_carrito"><img src="../../img/shopping-cart.png" alt="Carrito"><p id="cart__size__label"></p></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="product__detail__wrapper">
+            <div class="product__detail__img__container">
+                
+            </div>
+            <div class="product__detail__info__container">
+                <div class="product__detail__info__wrapper">
+                    <h1>Producto</h1>
+                    <p>Precio:</p>
+                    <p>Disponibilidad:</p>
+                </div>
+                <div class="product__detail__interaction__wrapper">
+                    <div class="product__detail__amount__wrapper">
+                        <label for="product__amount__input">Cantidad:</label>
+                        <div class="product__amount__selector__container">
+                            <button class="product__amount__selector__button" id="product__amount__selector__minus">-</button>
+                            <input type="text" id="product__amount__input" value="1">
+                            <button class="product__amount__selector__button" id="product__amount__selector__plus">+</button>
+                        </div>
+                    </div>
+                    <div class="product__detail__purchase__wrapper">
+                        <button class="product__purchase__button" id="btn__add__cart__detail">Agregar al Carrito <i class="fa-solid fa-cart-shopping"></i></button>
+                        <button class="product__purchase__button" id="btn__buy__detail">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product__description__container">
+            <h3>Descripción</h3>
+        </div>
+    </main>
+    <footer>
+        <script src="../../js/index.js" type="module"></script>
+        <script src="../../js/category_loader.js" type="module"></script>
+        <script src="detail.js" type="module"></script>
+    </footer>
+</body>
+</html>
+

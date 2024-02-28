@@ -1,0 +1,7 @@
+{
+  "name": "tasks-db-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

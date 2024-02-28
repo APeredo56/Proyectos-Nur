@@ -1,0 +1,44 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo{
+    font-family: 'Pacifico', sans-serif;
+    font-size: 42px;
+    color: #474747;
+    margin: 40px 0px 0px;
+}
+
+.menu{
+    font-family: 'Bebas', sans-serif;
+    font-size: 24px;
+    margin: 50px 0px 0px;
+}
+.menu ul{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu li{
+    list-style: none;
+    margin-left: 60px;
+}
+
+.menu li:first-child{
+    margin-left: 0px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #474747;
+}
+
+.menu a span{
+    color: #a5a5a5;
+    font-size: 12px;
+    display: block;
+}

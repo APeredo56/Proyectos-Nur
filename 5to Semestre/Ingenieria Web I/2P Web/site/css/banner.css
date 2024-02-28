@@ -1,0 +1,144 @@
+
+.banner__container{
+    min-width: 300px;
+    width: 100%;
+    top: 0px;
+    padding: 85px 5% 0px;
+    background-image: url("../img/background.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.banner__cellphone__container{
+    background-image: url("../img/telefono.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-width: 200px;
+    width: 34%;  
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner__cellphone__bag__figure figcaption{
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.banner__cellphone__bag__figure img{
+    padding-left: 10px;
+    margin-top:50px;
+    
+}
+
+.banner__cellphone__start__button{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: solid 1px #a0c6b7;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.banner__message__container{
+    color: white;
+    padding: 37px;
+    text-align: center;
+    justify-content: center;
+}
+
+.banner__message__text h1{
+    font-size: 1.8em;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.banner__message__text p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.banner__message__buttons{
+    margin-top: 45px;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+.banner__message__buttons button{
+    margin: 5px;
+}
+
+#banner__purchase__button{
+    background-color: #e76e66;
+    color: white;
+    border: solid 0px;
+    text-transform: uppercase;
+    padding: 17px 19px;
+    min-width: 160px;
+}
+
+#banner__learn__button{
+    background-color: #dda56c;
+    color: white;
+    border: solid 0px;
+    text-transform: uppercase;
+    padding: 17px 19px;
+    min-width: 160px;
+}
+
+#banner__or__label{
+    background-color: white;
+    color: black;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    border: solid 0px;
+    border-radius: 50%;
+    padding: 8px 10px;
+    font-weight: bold;
+    font-style: italic;
+    position: absolute;
+    margin: -18px;
+    top: 50%;
+    left: 50%;
+}
+
+@media (min-width:768px){
+    .banner__container{
+        flex-direction: row;
+        justify-content: center;
+        align-items: end;
+        padding-top: 120px;
+    }
+    .banner__message__container{
+        width: 45%;
+        padding: 37px;
+        text-align: left;
+    }
+
+    .banner__cellphone__bag__figure figcaption{
+        font-size: 1.7em;
+    }
+
+    .banner__message__buttons{
+        width: max-content;
+        margin: 0px;
+    }
+    
+}

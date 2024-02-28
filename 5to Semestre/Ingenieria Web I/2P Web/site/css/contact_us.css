@@ -1,0 +1,146 @@
+.contact__us__container{
+    color: white;
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+}
+
+.contact__us__form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 40px 0px;
+}
+
+.contact__us__form h2{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.contact__us__form input, .contact__us__form textarea, .contact__select__wrapper select{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+}
+
+.contact__input__wrapper {
+    display: inline-block;
+    background-color: white;
+    margin: 10px 0px;
+}
+
+.contact__input__wrapper input{
+    position: relative;
+    border: solid 0px;
+    margin: 0px;
+}
+
+.contact__input__wrapper input:invalid{
+    background-color: transparent !important;
+}
+
+.contact__input__wrapper>span {
+    position: absolute;
+    color: #646c6c;
+    padding: 10px 0px 0px 13px;
+    font-style: italic;
+}
+
+.contact__input__wrapper>span span {
+    color: #e76e66;
+}
+
+.contact__select__wrapper select, .contact__select__wrapper select option[value=""]{
+    color: #646c6c;
+}
+
+
+.contact__us__form textarea{
+    resize: none;
+}
+
+.contact__select__wrapper{
+    position: relative;
+}
+
+.contact__select__wrapper select{
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.contact__select__wrapper::after{
+    content: '\f0d7';
+    background-color: #e76e66;
+    color: white;
+    font-family: FontAwesome;
+    font-size: 16px;
+    padding: 7px 11px;
+    position: absolute;
+    top: 23%;
+    right: 2%;
+    pointer-events: none;
+}
+
+.contact__us__form input[type="submit"]{
+    font-style: normal;
+    background-color: #e76e66;
+    color: white;
+    border: solid 0px;
+}
+
+
+
+@media (min-width: 768px) {
+    .contact__us__form{
+        padding: 70px 0px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .contact__us__form input, .contact__us__form select{
+        padding: 13px 13px;
+        margin: 0px;
+        font-style: italic;
+    } 
+
+    .contact__us__form h2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .contact__us__form textarea{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 6;
+        margin: 0px;
+        font-style: italic;
+    }
+
+    .contact__us__form input[type="submit"]{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        width: fit-content;
+        justify-self: end;
+    }
+
+    .contact__info__wrapper{
+        display: flex;
+        gap: 20px;
+    }
+
+    .contact__input__wrapper>span{
+        padding: 13px;
+    }
+
+    .contact__select__wrapper::after{
+        top: 13%;
+    }
+
+}
+

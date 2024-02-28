@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Formulario 3</title>
+</head>
+
+<body>
+    <form action="#">
+        <h1>Introduce tus datos personales</h1>
+        <div class="settings">
+            <label for="nombre">Nombre:</label>
+            <input type="text">
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text">
+
+            <label for="login">Login:</label>
+            <input type="text">
+
+            <label for="password">Password:</label>
+            <input type="password">
+
+            <label for="password_repeat">Repite tu Password:</label>
+            <input type="password">
+
+            <label for="sexo">Sexo:</label>
+            <fieldset id="field_sexo">
+                <div>
+                    <input type="radio" name="sexo" id="input_sexo">
+                    <label for="hombre">Hombre</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="sexo" id="input_sexo">
+                    <label for="mujer">Mujer</label>
+                </div>
+            </fieldset>
+
+            <label for="edad">Edad:</label>
+            <fieldset id="field_edad">
+                <div>
+                    <input type="radio" name="edad" id="input_edad">
+                    <label for="hombre">0-15</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="edad" id="input_edad">
+                    <label for="mujer">16-30</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="edad" id="input_edad">
+                    <label for="mujer">31-50</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="edad" id="input_edad">
+                    <label for="mujer">50-Más</label>
+                </div>
+            </fieldset>
+
+            <label for="estado">Estado</label>
+            <select name="estado" id="sel_estado">
+                <option value="SC">Santa Cruz</option>
+                <option value="LP">La Paz</option>
+                <option value="CB">Cochabamba</option>
+                <option value="OR">Oruro</option>
+                <option value="PT">Potosi</option>
+            </select>
+
+            <label for="navegadores">Navegadores que utilizas:</label>
+            <fieldset>
+                <div><label for="firefox">Firefox</label><input type="checkbox"></div>
+                <div><label for="opera">Opera</label><input type="checkbox"></div>
+                <div><label for="safari">Safari</label><input type="checkbox"></div>
+                <div><label for="google_chrome">Google Chrome</label><input type="checkbox"></div>
+                <div><label for="internet_explorer">Internet Explorer</label><input type="checkbox"></div>
+            </fieldset>
+
+            <label for="comentarios">Comentarios y sugerencias:</label>
+            <textarea name="text_comentarios" id="txtComentarios" cols="5" rows="10"></textarea>
+            
+        </div>
+        <div id="div_botones">
+            <input type="button" value="Enviar">
+            <input type="button" value="Borrar">
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+body{
+    background-color: #BCFF97;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+main{
+    display: inline-block;
+    width: 74%;
+}
+
+main h1{
+    display: inline-block;
+    padding-left: 30px;
+    font-size: 36px;
+}
+
+.products__container{
+    text-align: center;
+}
+
+.product__item__container{
+    display: inline-block;
+    vertical-align: top;
+    background-color: #6BF229;
+    padding: 20px;
+    margin: 15px;
+    width: 350px;
+}
+
+.product__img{
+    width: 250px;
+}
+
+.product__item__interaction__container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product__item__info__wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.product__item__info__wrapper p{
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+.add__cart__button{
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+}
+
+.add__product__button{
+    display: inline-block;
+    background-color: transparent;
+    border: 0px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.product__item__edit__button{
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    transform: translateY(35px);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.product__item__delete__button{
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width:600px){
+
+    body{
+        text-align: center;
+    }
+
+    main{
+        width: 100%;
+    }
+
+    main h1{
+        padding: 0px;
+    }
+
+    header{
+        text-align: left;
+    }
+}

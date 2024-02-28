@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_cuentas"
+        android:icon="@drawable/ic_cuentas_24"
+        android:title="@string/title_accounts" />
+
+    <item
+        android:id="@+id/navigation_pagos"
+        android:icon="@drawable/ic_payment_24"
+        android:title="@string/title_pagos" />
+
+    <item
+        android:id="@+id/navigation_transferencias"
+        android:icon="@drawable/ic_transferencia_24"
+        android:title="@string/title_transfers" />
+
+    <item
+        android:id="@+id/navigation_sucursales"
+        android:icon="@drawable/ic_locations_24"
+        android:title="@string/title_sucursales" />
+
+</menu>

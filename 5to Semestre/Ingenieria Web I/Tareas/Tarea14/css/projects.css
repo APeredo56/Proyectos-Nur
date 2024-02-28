@@ -1,0 +1,55 @@
+
+.separator{
+    background-image: url("img/title-bg.png");
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    margin: 53px 0px 53px 0px;
+}
+
+.separator h2{
+    background-color: white;
+    width: 185px;
+    height: 27px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: Bebas, sans-serif;
+}
+
+.projects{
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects_item{
+    width: 220px;
+}
+
+.projects_item figure, .projects_item_img{
+    width: 100%;
+    margin: 0px;
+}
+
+.projects_item_title{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Bebas, sans-serif;
+    margin: 18px 0px 18px 3px;
+}
+
+.projects_item a{
+    text-decoration: none;
+    font-family: Bebas, sans-serif;
+    color: #474747;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.projects_item a i{
+    display: inline-block;
+    margin: 5px;
+}

@@ -1,0 +1,46 @@
+
+body{
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #c0c0c0;
+}
+
+main{
+    width: 50%;
+    margin-top: 20px;
+    background-color: white;
+    padding: 0px 80px 20px 80px;
+}
+
+h1,h2{
+    color: #6a9cca;
+    font-size: large;
+    font-weight: 500;   
+}
+
+h2{
+    font-size: medium;
+}
+
+p{
+    font-size: 10pt;
+}
+
+#img_header{
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+
+#img_small{
+    float: left;
+    width: 30%;
+    margin: 0px 10px 0px 10px;
+}
+
+#img_kano{
+    float: right;
+    margin-left: 15px;
+    width: 60%;
+}

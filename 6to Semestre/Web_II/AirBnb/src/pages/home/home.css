@@ -1,0 +1,72 @@
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-check-input:checked {
+    background-color: #FF385C !important;
+    border-color: #FF385C !important;
+}
+
+.imgInfoWindow {
+    width: 240px;
+}
+
+.mapContainer {
+    height: 100%;
+    width: 40vw;
+}
+
+.mapContainer>div {
+    height: 100% !important;
+    width: 100% !important;
+    position: relative !important;
+}
+
+.accommodationsWrapper {
+    max-height: 75vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.accommodationsWrapper::-webkit-scrollbar {
+    width: 10px;
+}
+
+.accommodationsWrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.accommodationsWrapper::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+.accommodationsWrapper::-moz-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.accommodationsWrapper::-moz-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+.accommodationCard {
+    overflow: hidden;
+    border-radius: 10px !important;
+    width: 200px;
+}
+.accommodationCard img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.accommodationDescription {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: small;
+}

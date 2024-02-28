@@ -1,0 +1,30 @@
+
+fieldset{
+    padding: 0%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+form fieldset input{
+    width: 150px;
+}
+
+input[type="radio"], input[type="checkbox"], input[type="button"]{
+    width: auto;
+}
+
+#field_sexo div {
+    display: inline;
+}
+
+#field_foto, #field_suscripcion, #field_botones{
+    display:flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: auto;
+}
+#field_foto *, #field_botones *{
+    margin: 1px;
+}
+

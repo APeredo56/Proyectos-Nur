@@ -1,0 +1,43 @@
+
+
+create table articulos(
+	id Serial primary key,
+	nombre varchar(200),
+	precio float not null,
+	categoria varchar(100),
+	disponible boolean,
+	descripcion varchar(400),
+	marca varchar(150)
+);
+
+create table personas(
+	id Serial primary key,
+	nickname varchar(20),
+	nombre varchar(100),
+	apellidos varchar(150),
+	contraseña varchar(50),
+	correo varchar(200),
+	edad int,
+	isAdmin boolean
+);
+
+create table provisiones(
+	id Serial primary key
+);
+
+create table ventas(
+	articulos_id int,
+	personas_id int,
+	fecha timestamp,
+	precio_art float,
+	cantidad_art int,
+	primary key(articulos_id, personas_id)
+);
+
+create table provision_arts(
+	articulos_id int,
+	provisiones_id int,
+	fecha timestamp,
+	cantidad int,
+	primary key(articulos_id, provisiones_id, fecha)
+);

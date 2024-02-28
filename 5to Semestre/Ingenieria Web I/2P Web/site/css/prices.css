@@ -1,0 +1,127 @@
+.prices__container{
+    background-color: #f6f6f7;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.prices__title__container{
+    display: inline-block;
+    width: 70%;
+    padding-bottom: 20px;
+}
+
+.prices__title__container h2{
+    font-size: 20px;
+    line-height: 22px;
+    color: #232323;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.prices__title__container p{
+    font-size: 16px;
+    line-height: 22px;
+    color: #999999;
+    font-weight: 300;
+}
+
+.prices__categories__container form{
+    display: inline-block;
+    color: white;
+    margin: 10px;
+}
+
+.price__category__name__wrapper{
+    margin: 0px;
+    padding: 20px 0px 30px;
+    position: relative;
+}
+
+.price__category__name__wrapper h3{
+    margin: 0px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.price__circular__label{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    font-size: 24px;
+    margin: 0px;
+}
+
+.price__circular__label span{
+    font-size: 14px;
+    transform: translateY(4px);
+}
+
+.price__details__container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+    padding: 0px 36px 0px;
+}
+
+.price__button{
+    padding: 11px;
+    margin: 16px;
+}
+
+.prices__category__item.green__form{
+    background-color: #6cbfa1;
+}
+
+.price__category__name__wrapper.green__form, .price__button.green__form{
+    background-color: #1b7e5a;
+    border: solid 0px;
+    color: white;
+}
+
+.price__circular__label.green__form{
+    background-color: #166549;
+}
+
+.prices__category__item.red__form{
+    background-color: #f3aea8;
+}
+
+.price__category__name__wrapper.red__form, .price__button.red__form{
+    background-color: #e76e66;
+    border: solid 0px;
+    color: white;
+}
+
+.price__circular__label.red__form{
+    background-color: #b95752;
+}
+
+.prices__category__item.blue__form{
+    background-color: #9bc9d4;
+}
+
+.price__category__name__wrapper.blue__form, .price__button.blue__form{
+    background-color: #579aa9;
+    border: solid 0px;
+    color: white;
+}
+
+.price__circular__label.blue__form{
+    background-color: #457b87;
+}
+
+@media (min-width: 768px){
+    .prices__title__container{
+        width: 38%;
+    }
+}
+

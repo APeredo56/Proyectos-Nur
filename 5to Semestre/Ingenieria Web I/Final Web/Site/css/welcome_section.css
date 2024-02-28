@@ -1,0 +1,17 @@
+.welcome__section{
+    background-color: #3786be;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.welcome__section p{
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+.welcome__section img{
+    width: 327px;
+    
+}

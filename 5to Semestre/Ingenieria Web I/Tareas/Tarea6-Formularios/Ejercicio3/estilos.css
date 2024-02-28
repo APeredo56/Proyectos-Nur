@@ -1,0 +1,30 @@
+div.settings {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 5px;
+    align-items:center;
+    padding: 5px
+}
+
+form{
+    background-color: rgb(253, 253, 187);
+    width: fit-content;
+}
+
+fieldset{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0%;
+}
+
+input[type="text"], input[type="password"], select{
+    width: 150px;
+}
+
+#div_botones{
+    text-align: center;
+    margin: 5px;
+}
+
+

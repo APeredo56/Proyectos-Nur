@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Formulario 2</title>
+</head>
+
+<body>
+    <form action="#">
+        <h2>Rellena tu CV</h2>
+        <fieldset>
+            <label for="nombre">Nombre</label>
+            <input type="text">
+            <label for="apellidos">Apellidos</label>
+            <input type="text">
+            <label for="password">Contraseña</label>
+            <input type="password">
+            <label for="dni">DNI</label>
+            <input type="number" id="input_dni">
+        </fieldset>
+
+        <fieldset id="field_sexo">
+            <header>Sexo</header>
+
+            <div>
+                <input type="radio" name="sexo" id="input_sexo">
+                <label for="hombre">Hombre</label>
+            </div>
+
+            <div>
+                <input type="radio" name="sexo" id="input_sexo">
+                <label for="mujer">Mujer</label>
+            </div>
+        </fieldset>
+
+        <fieldset id="field_foto">
+            <p>Incluir mi foto</p>
+            <input type="url">
+            <input type="file">
+        </fieldset>
+
+        <fieldset id="field_suscripcion">
+            <input type="checkbox">
+            <label for="suscribirse">Suscribirme al boletin de novedades</label>
+        </fieldset>
+
+        <fieldset id="field_botones">
+            <input type="button" value="Guardar Cambios">
+            <input type="button" value="Borrar los datos introducidos">
+        </fieldset>
+    </form>
+</body>
+
+</html>

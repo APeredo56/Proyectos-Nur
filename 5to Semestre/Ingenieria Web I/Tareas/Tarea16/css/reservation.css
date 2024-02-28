@@ -1,0 +1,121 @@
+.room-reservation-container {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans';
+    width: min(100%, 975px);
+}
+
+.room-info {
+    background-color: #f3f3f3;
+    padding: 25px 20px;
+}
+
+.room-info-title{
+    color: #343232;
+    font-size: 1.15em;
+    margin: 0;
+}
+
+.room-info-text{
+    color: #6f6e6e;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.book-reservation {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 17px;
+    color: #6f6e6e;
+}
+
+.book-item {
+    margin: 10px;
+    width: 100%;
+}
+
+.book-btn {
+    background-color: #32a2e3;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-weight: 700;
+}
+
+.room-data {
+    color: #6f6e6e;
+    border-radius: 8px;
+    border: solid 2px #d9d7d7;
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+}
+
+@media screen and (max-width: 767px) {
+    .room-info {
+        text-align: center;
+    }
+
+    .room-reservation-container{
+        flex-direction: column;
+    }
+
+    .book-reservation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .book-item {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .room-reservation-container {
+        flex-direction: column;
+    }
+
+    .room-info {
+        text-align: center;
+    }
+
+    .book-reservation {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .room-reservation-container{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .reservation-position {
+        position: relative;
+    }
+
+    .book-reservation {
+        background-color: #fff;
+    }
+
+    .book-item {
+        width: fit-content;
+        font-size: 0.9em;
+        margin: 6px;
+    }
+    
+    .room-data {
+        font-size: 0.9em;
+        white-space: nowrap;
+    }
+
+    .book-btn {
+        font-size: 0.8em;
+        white-space: nowrap;
+    }
+}

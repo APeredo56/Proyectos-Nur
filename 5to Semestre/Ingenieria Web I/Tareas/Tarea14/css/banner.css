@@ -1,0 +1,70 @@
+.banner{
+    margin: 50px 0px 0px;
+    position: relative;
+}
+
+.banner__subtitle{
+    font-family: 'Bebas', sans-serif;
+    color: white;
+    background-color: #404040;
+    padding: 14px 16px 12px;
+    font-size: 28px;
+    position: absolute;
+    bottom: 4px;
+    left: 0px;
+}
+
+.banner__subtitle__text1{
+    font-size: 14px;
+    color: #9a9a9a;
+    display: block;
+}
+
+.banner__navigation{
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.banner__navigation li{
+    display: inline-block;
+    margin-left: 5px;
+    padding: 0px;
+}
+
+.banner__navigation li:first-child{
+    margin-left: 0px;
+}
+
+.banner__navigation a{
+    display: block;
+    width: 23px;
+    height: 5px;
+    background-color: white;
+    text-decoration: none;
+}
+
+.banner__navigation li:first-child a, .banner__navigation a:hover{
+    background-color: #444444;
+}
+
+.banner__navigation a span{
+    display: none;
+}
+
+.banner__footer {
+    background-image: url('img/bg-banner-description.png');
+    padding: 20px 17px;
+}
+
+.banner__footer__title{
+    margin: 0px;
+    font-size: 16px;
+}
+
+.banner__footer__title + p{
+    margin: 16px 0px 0px;
+}

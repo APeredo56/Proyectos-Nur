@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos.css">
+    <title>Instala ya la OTA en tu Android Wear</title>
+</head>
+<body>
+    <h1>Instala ya la OTA en tu Android Wear</h1>
+    <p>
+        La nueva versión de <strong>Android Wear</strong> que trae a los relojes las pantallas de reloj 
+        interactivas, el modo Together, el Traductor de Google y el soporte Wi-Fi al 
+        LG G Watch R ya está llegando vía OTA a los relojes durante estos días.
+    </p>
+    <img src="img/AWearImg.jpg" alt="Android Wear" class="imagen">
+    <p>
+        Si no quieres esperar para disfrutar de la última versión de Android Wear puedes actualizar 
+        manualmente la OTA. De momento la OTA está disponible para descargar para los LG G Watch, 
+        LG G Watch R, LG Watch Urbane y Sony SmartWatch 3.
+    </p>
+
+    <h3>Instalar manualmente su actualización OTA</h3>
+    <ul>
+        <li>LG G Watch: LCA43 desde LDZ22D</li>
+        <li>LG G Watch R: LCA44B desde LDZ22D</li>
+        <li>LG Watch Urbane: LCA44B desde LDZ22D</li>
+        <li>Samsung Gear Live: No disponible</li>
+        <li>Sony SmartWatch 3: LCA43 desde LDZ22D</li>
+        <li>Asus ZenWatch: No disponible</li>
+    </ul>
+
+    <h3>Para actualizar manualmente necesitamos tener instalado el SDK de Android y seguir los 
+        siguientes pasos:</h3>
+    <ol>
+        <li>Descargar el archivo que nos corresponda de la actualización respecto a nuestro dispositivo y versión actual.</li>
+        <li>Guardar el ZIP en la carpeta Platform-tools del Android SDK.</li>
+        <li>Activar las opciones de Opciones de desarrollo de nuestro Android Wear: Ajustes > Acerca de, y pulsar siete veces sobre "número de compilación".</li>
+        <li>Activar la Depuración ADB: Ajustes > Opciones de desarrollo > Depuración ADB > Sí</li>
+        <li>Conectar el reloj al ordenador por USB a través de su base de carga o por Bluetooth si activamos en Opciones de desarrollo la opción Depurar por Bluetooth.</li>
+        <li>Abrir en el ordenador una ventana de comandos y dentro de la carpeta Platform-tools escribir adb reboot-bootloader para entrar al bootloader. Aceptar la depuración en la pantalla del reloj.</li>
+        <li>Entrar al Recovery Mode tocando de las teclas virtuales que aparecen en el reloj.</li>
+        <li>Cuando aparezca un icono de Android con una exclamación tocar la pantalla.</li>
+        <li>Seleccionar apply update from adb deslizando el dedo con un gesto hacía abajo para ir bajando de opción. Cuando aparezca un icono de Android con una exclamación tocar la pantalla.</li>
+        <li>Escribir desde el terminal o ventana de comandos de nuestro ordenador la instrucción adb sideload junto al nombre de la actualización. Por ejemplo: Seleccionar apply update from adb deslizando el dedo con un gesto hacía abajo para ir bajando de opción. Cuando aparezca un icono de Android con una exclamación tocar la pantalla.</li>
+    </ol>
+
+    <p>Una vez instalada la actualización tan sólo tenemos que reiniciar el dispositivo seleccionando la opción reiniciar y deslizando el dedo hacía un lateral de la pantalla. Este proceso dejará el dispositivo actualizado respetando nuestros datos ya que es lo que haría la OTA automáticamente.</p>
+</body>
+</html>

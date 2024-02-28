@@ -1,0 +1,12 @@
+body{
+    background-image: url("../img/bg.png");
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 940px;
+    min-width: 940px;
+    border: 1px solid black;
+}

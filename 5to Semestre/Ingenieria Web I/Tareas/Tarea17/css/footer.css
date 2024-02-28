@@ -1,0 +1,112 @@
+footer{
+    width: 100%;
+}
+
+footer hr {
+    
+    margin-bottom: 30px;
+}
+
+.footer-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.footer-info-contact p{
+    text-align: right;
+    font-size: 12px;
+}
+
+.footer-info-botones{
+    display: flex;
+}
+
+.tw-icon{
+    background-image: url('../icons/twit.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.wiff-icon{
+    background-image: url('../icons/wiff.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.face-icon{
+    background-image: url('../icons/face.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.pint-icon{
+    background-image: url('../icons/pinte.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+@media (max-width: 1200px) {
+    .tw-icon{
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+    
+    .wiff-icon{
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+    .face-icon{
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+    .pint-icon{
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .tw-icon{
+        width: 10px;
+        height: 10px;
+        margin-right: 3px;
+    }
+    .wiff-icon{
+        width: 10px;
+        height: 10px;
+        margin-right: 3px;
+    }
+    .face-icon{
+        width: 10px;
+        height: 10px;
+        margin-right: 3px;
+    }
+    .pint-icon{
+        width: 10px;
+        height: 10px;
+        margin-right: 3px;
+    }
+
+    .footer-info-contact p{
+        font-size: 7px;
+    }
+}

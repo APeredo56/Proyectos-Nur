@@ -1,0 +1,70 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Custom
+.primary-color {
+    color: #0C0A33 !important;
+}
+
+.primary-bg {
+    background-color: #0C0A33 !important;
+}
+
+.primary-border{
+    border: solid 1px #0C0A33 !important;
+}
+
+.primary-variant-color {
+    color: #150D48 !important;
+}
+
+.primary-variant-bg{
+    background-color: #150D48 !important;
+}
+
+.secondary-color {
+    color: #7156E5 !important;
+}
+
+.secondary-bg {
+    background-color: #7156E5 !important;
+}
+
+.secondary-border{
+    border: solid 1px #7156E5 !important;
+}
+
+.card-width {
+    width: 13rem;
+}
+
+.table-transparent * {
+    background-color: transparent !important;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.w-fit{
+    width: fit-content !important;
+}
+
+.h-fit{
+    height: fit-content !important;
+}
+
+.h-sm{
+    height: 25vh !important;
+}
+
+.scroll-container{
+    overflow-y: auto;
+    //max-height: 25vh !important;
+}

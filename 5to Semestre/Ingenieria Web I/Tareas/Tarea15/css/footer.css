@@ -1,0 +1,38 @@
+footer hr{
+    border: none;
+    background-image: url("img/title-bg.png");
+    background-repeat: repeat;
+    height: 5px;
+    width: 100%;
+    margin: 0px;
+}
+
+.footer_container{
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: HelveticaNeue, sans-serif;
+
+}
+
+.footer_container a{
+    text-decoration: none;
+    color: #414141;
+    font-weight: bold;
+}
+
+@media (min-width: 768px){
+    .footer_container p{
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 992px){
+
+    .footer_container {
+        width: 940px;
+    }
+}

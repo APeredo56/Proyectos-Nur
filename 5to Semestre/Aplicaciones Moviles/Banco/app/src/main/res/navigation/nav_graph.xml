@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graphv2"
+    app:startDestination="@id/navigation_cuentas">
+
+    <fragment
+        android:id="@+id/navigation_cuentas"
+        android:name="com.example.banco.ui.fragments.CuentasFragment"
+        android:label="Cuentas"
+        tools:layout="@layout/fragment_cuentas" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_pagos"
+        android:name="com.example.banco.ui.fragments.PagosFragment"
+        android:label="Pagos"
+        tools:layout="@layout/fragment_pagos" >
+        <action
+            android:id="@+id/action_navigation_pagos_to_transaccionesFragment"
+            app:destination="@id/navigation_transacciones" />
+        <action
+            android:id="@+id/action_navigation_pagos_to_crearQRFragment"
+            app:destination="@id/crearQRFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_transacciones"
+        android:name="com.example.banco.ui.fragments.TransaccionesFragment"
+        android:label="Transacciones"
+        tools:layout="@layout/fragment_transacciones" >
+    <argument
+        android:name="ingreso"
+        app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_transferencias"
+        android:name="com.example.banco.ui.fragments.TransferenciasFragment"
+        android:label="Transferencias"
+        tools:layout="@layout/fragment_transferencias" >
+        <action
+            android:id="@+id/action_navigation_transferencias_to_hacerTransferenciaFragment"
+            app:destination="@id/hacerTransferenciaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_sucursales"
+        android:name="com.example.banco.ui.fragments.SucursalesFragment"
+        android:label="Sucursales"
+        tools:layout="@layout/fragment_sucursales" />
+    <fragment
+        android:id="@+id/hacerTransferenciaFragment"
+        android:name="com.example.banco.ui.fragments.HacerTransferenciaFragment"
+        android:label="Realizar Transferencia"
+        tools:layout="@layout/fragment_hacer_transferencia" >
+        <argument
+            android:name="idBeneficiario"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearQRFragment"
+        android:name="com.example.banco.ui.fragments.QRFragment"
+        android:label="QR"
+        tools:layout="@layout/fragment_qr" >
+        <argument
+            android:name="pago"
+            app:argType="boolean" />
+    </fragment>
+
+
+</navigation>

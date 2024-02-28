@@ -1,0 +1,8 @@
+body{
+    min-width: 300px;
+    max-width: 1344px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}

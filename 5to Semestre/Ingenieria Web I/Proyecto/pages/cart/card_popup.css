@@ -1,0 +1,51 @@
+
+.cart__add__card__popup{
+    background-color: #88FB4D;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; */
+}
+
+.cart__add__card__popup form{
+    display: flex;
+    flex-direction: column;
+}
+
+.add__cart__details__wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.card__exp__date__wrapper, .card__cvv__wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.card__popup__title{
+    margin: 0px;
+    background-image: linear-gradient(#49D80A, #25670D);
+    color: white;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.cart__add__card__popup input, .cart__add__card__popup label {
+    margin: 5px  10px
+}
+
+#save__card__button{
+    background-image: linear-gradient(#49D80A, #25670D);
+    color: white;
+    width: fit-content;
+    padding: 5px 20px;
+    border: 0;
+    font-weight: 400;
+    align-self: center;
+}
+
+#card__cvv__input{
+    width: 100px;
+}

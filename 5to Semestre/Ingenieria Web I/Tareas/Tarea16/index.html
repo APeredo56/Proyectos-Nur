@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Hotel</title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/reservation.css">
+    <link rel="stylesheet" href="css/rooms.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-container">
+                <div class="header-logo-container">
+                    <img src="img/logo.png" alt="Logo" class="header-logo-img">
+                </div>
+                <div class="header-mobile-menu-container">
+                    <label for="menu-mobile-switch" class="menu-mobile-switch">
+                        <i class="fa-solid fa-bars"></i>
+                        Menu
+                    </label>
+                    <input type="checkbox" id="menu-mobile-switch" class="menu-mobile-switch-checkbox">
+                    <nav class="header-nav-container">
+                        <ul class="header-nav-list">
+                            <li class="header-nav-list-item"><a href="#" class="header-nav-link">Hotel</a></li>
+                            <li class="header-nav-list-item"><a href="#" class="header-nav-link">Rooms & Suites</a></li>
+                            <li class="header-nav-list-item"><a href="#" class="header-nav-link">Reservation</a></li>
+                            <li class="header-nav-list-item"><a href="#" class="header-nav-link">Services</a></li>
+                            <li class="header-nav-list-item"><a href="#" class="header-nav-link">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="language-container">
+                        <select name="language-selector" id="language-selector" class="language-selector">
+                            <option value="en">EN</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <figure class="banner-container">
+                <div class="banner-icon-container" id="left">
+                    <i class="fa-solid fa-chevron-left banner-left-icon"></i>
+                </div>
+                <div class="banner-img-container">
+                    <img src="img/banner.png" alt="Banner" class="banner-img">
+                </div>
+                <div class="banner-icon-container" id="right">
+                    <i class="fa-solid fa-chevron-right banner-right-icon"></i>
+                </div>
+            </figure>
+            <div class="reservation-position">
+                <div class="room-reservation-container">
+                    <div class="room-info">
+                        <h2 class="room-info-title">Book a room online</h2>
+                        <p class="room-info-text">Lorem ispsum solor sid ahmed loresin vane.</p>
+                    </div>
+                    <div class="book-reservation">
+                        <div class="book-item">
+                            <label for="room-type">Type of room:</label>
+                            <select class="room-data" id="room-type">
+                                <option value="" disabled selected>Select a type of room</option>
+                            </select>
+                        </div>
+                        <div class="book-item">
+                            <label for="check-in-date">Check-in Date:</label>
+                            <input type="date" class="room-data" id="check-in-date"></input>
+                        </div>
+                        <div class="book-item">
+                            <label for="check-out-date">Check-out Date:</label>
+                            <input type="date" class="room-data" id=""></input>
+                        </div>
+                        <div class="book-item">
+                            <label for="adults">Adults:</label>
+                            <select name="adults" class="room-data" id="room-data">
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                        <div class="book-item">
+                            <label for="children">Children:</label>
+                            <select class="room-data" id="children">
+                                <option value="0">0</option>
+                            </select>
+                        </div>
+                        <button class="book-btn book-item">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="rooms-bg">
+                <div class="rooms-container">
+                    <div class="room">
+                        <img src="img/room1.png" alt="Foto del cuarto" class="room-img">
+                        <h1 class="room-title">Single room</h1>
+                        <span class="room-price">110 €</span>
+                        <p class="room-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, dolores esse impedit labore
+                            reiciendis nesciunt accusamus voluptatibus aliquam maiores, sunt modi nobis dolore sequi,
+                            numquam expedita ullam magnam quibusdam nam.
+                        </p>
+                    </div>
+                    <div class="room">
+                        <img src="img/room2.png" alt="" class="room-img">
+                        <h1 class="room-title">Double room</h1>
+                        <span class="room-price">180 €</span>
+                        <p class="room-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, dolores esse impedit labore
+                            reiciendis nesciunt accusamus voluptatibus aliquam maiores, sunt modi nobis dolore sequi,
+                            numquam expedita ullam magnam quibusdam nam.
+                        </p>
+                    </div>
+                    <div class="room">
+                        <img src="img/suite.png" alt="" class="room-img">
+                        <h1 class="room-title">Suite room</h1>
+                        <span class="room-price">210 €</span>
+                        <p class="room-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, dolores esse impedit labore
+                            reiciendis nesciunt accusamus voluptatibus aliquam maiores, sunt modi nobis dolore sequi,
+                            numquam expedita ullam magnam quibusdam nam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer-bg">
+            <div class="footer-container">
+                <p class="copyright">© 2012 Paradise Hotel. All Rights Reserved.</p>
+                <div class="footer-icons-container">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-flickr"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                </div>
+                <nav class="footer-nav-container">
+                    <ul class="footer-nav-list">
+                        <li class="footer-nav-list-item"><a href="#" class="footer-nav-link">Home</a></li>
+                        <li class="footer-nav-list-item"><a href="#" class="footer-nav-link">Rooms & Suites</a></li>
+                        <li class="footer-nav-list-item"><a href="#" class="footer-nav-link">Reservation</a></li>
+                        <li class="footer-nav-list-item"><a href="#" class="footer-nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

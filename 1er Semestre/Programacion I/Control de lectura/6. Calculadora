@@ -1,0 +1,28 @@
+Proceso Calculador
+	Escribir 'Calculadora';
+	Definir n1 Como Entero;
+	Definir n2 Como Entero;
+	Definir n3 Como Entero;
+	Definir n4 Como Entero;
+	Definir r Como Real;
+	Definir suma Como Entero;
+	Definir multiplicacion Como Entero;
+	Definir division Como Real;
+	Escribir 'Ingresar 4 numeros enteros para proceder con las operaciones';
+	Escribir 'Ingresar el primer numero: ';
+	Leer n1;
+	Escribir 'Ingresar el segundo numero: ';
+	Leer n2;
+	Escribir 'Ingresar el tercer numero: ';
+	Leer n3;
+	Escribir 'Ingresar el cuarto numero: ';
+	Leer n4;
+	suma <- n1 + n2;
+	multiplicacion <- suma * n3;
+	division <- multiplicacion / n4;
+	Escribir 'Operaciones finalizadas, los resultados son: ';
+	Escribir 'Resultado de la suma de los 2 primeros numeros:                       ', suma;
+	Escribir 'Resultado de la multiplicacion de la suma por el tercer numero:       ', multiplicacion;
+	Escribir 'Resultado de la division de la multiplicacion entre el cuarto numero: ', division;
+	
+FinProceso

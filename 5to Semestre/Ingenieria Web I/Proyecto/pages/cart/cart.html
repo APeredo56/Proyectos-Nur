@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="card_popup.css">
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <header>
+        <nav class="nav__bar">
+            <div class="header__wrapper">
+                <a href="../../index.html">
+                    <img src="../../img/logo.png" alt="Logo" id="header__logo">
+                </a>
+                <div class="search__bar__container">
+                    <form action="" method="get">
+                        <input type="search" name="search" class="header__search__bar" placeholder="Buscar">
+                        <button type="submit" class="header__search__submit">
+                            <img src="../../img/search.png" alt="Buscar" id="search__bar__button__img">
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="menu__container">
+                <ul class="menu">
+                    <li class="menu__switch__button menu__item">
+                        <label for="menu-mobile-switch" class="menu-mobile-switch">
+                            <i class="fa-solid fa-bars"></i>
+                        </label>
+                        <input type="checkbox" id="menu-mobile-switch" class="menu-mobile-switch__checkbox">
+                    </li>
+                    <li class="menu__item" id="header__category__dropdown__container">
+                        <p>Categorias <i class="fa-solid fa-angle-down"></i></p>
+                        <ul class="header__categories__list"></ul>
+                    </li>
+                    <li class="menu__item" id="account__menu__container"><a href="../../pages/login/login.html">Iniciar Sesión</a></li>
+                    <li class="menu__item"><a href="../../pages/cart/cart.html" id="nav_carrito"><img src="../../img/shopping-cart.png" alt="Carrito"><p id="cart__size__label"></p></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="cart__items__wrapper">
+            <h1>Mi Carrito</h1>
+            <div class="cart__items__container"></div>
+        </div>
+        <div class="cart__payment__container">
+            <label>Metodo de Pago</label>
+            <div class="card__container">
+
+            </div>
+            <div class="cart__add__card__popup" >
+                <form action="">
+                    <h2 class="card__popup__title">Agregar Tarjeta</h2>
+                    <label for="add__cart__number__input">Número de Tarjeta</label>
+                    <input type="number" id="add__cart__number__input">
+                    <div class="add__cart__details__wrapper">
+                        <div class="card__exp__date__wrapper">
+                            <label for="card__exp__date__input">Fecha de Vencimiento</label>
+                            <input type="date" id="card__exp__date__input">
+                        </div>
+                        <div class="card__cvv__wrapper">
+                            <label for="card__cvv__input">CVV</label>
+                            <input type="number" id="card__cvv__input">
+                        </div>
+                    </div>
+                    <input type="submit" id="save__card__button" value="Guardar">
+                </form>
+            </div>
+            <button class="cart__payment__button" id="cart__add__card__button">Agregar Tarjeta</button>
+            <p id="cart__total__price__label">Total Bs 3000</p>
+            <button class="cart__payment__button" id="cart__buy__button">Finalizar Compra</button>
+        </div>
+    </main>
+    <footer>
+        <script src="../../js/index.js" type="module"></script>
+        <script src="../../js/category_loader.js" type="module"></script>
+        <script src="cart_loader.js"></script>
+        <script src="purchase_register.js" type="module"></script>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="login_forms.css">
+    <title>Aris</title>
+</head>
+<body>
+    <header>
+        <nav class="nav__bar">
+            <div class="header__wrapper">
+                <a href="../../index.html">
+                    <img src="../../img/logo.png" alt="Logo" id="header__logo">
+                </a>
+                <div class="search__bar__container">
+                    <form action="" method="get">
+                        <input type="search" name="search" class="header__search__bar" placeholder="Buscar">
+                        <button type="submit" class="header__search__submit">
+                            <img src="../../img/search.png" alt="Buscar" id="search__bar__button__img">
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="menu__container">
+                <ul class="menu">
+                    <li class="menu__switch__button menu__item">
+                        <label for="menu-mobile-switch" class="menu-mobile-switch">
+                            <i class="fa-solid fa-bars"></i>
+                        </label>
+                        <input type="checkbox" id="menu-mobile-switch" class="menu-mobile-switch__checkbox">
+                    </li>
+                    <li class="menu__item" id="header__category__dropdown__container">
+                        <p>Categorias <i class="fa-solid fa-angle-down"></i></p>
+                        <ul class="header__categories__list"></ul>
+                    </li>
+                    <li class="menu__item" id="account__menu__container"><a href="../../pages/login/login.html">Iniciar Sesión</a></li>
+                    <li class="menu__item"><a href="../../pages/cart/cart.html" id="nav_carrito"><img src="../../img/shopping-cart.png" alt="Carrito"><p id="cart__size__label"></p></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="login__options__container">
+            <label for="login__switch" id="log__in__label">Iniciar Sesión</label>
+            <label for="login__switch" id="sign__up__label">Registrarse</label>
+            <input type="checkbox" id="login__switch" >
+        </div>
+        <form action="" onsubmit="login" class="log__in__form" id="log__in__form">
+            <label for="email__login__input">Correo Electrónico</label>
+            <span id="login__email__error" class="auth__error"></span>
+            <input type="email" name="email" id="email__login__input">
+
+            <label for="password__login__input">Contraseña</label>
+            <span id="login__password__error" class="auth__error"></span>
+            <input type="password" name="password" id="password__login__input">            
+
+            <input type="submit" class="form__submit" id="login__submit__button" value="Iniciar Sesión" formnovalidate="formnovalidate">
+        </form>
+        <form action="" class="sign__up__form" id="sign__up__form">
+            <label for="name__input">Nombre</label>
+            <span id="sign__up__name__error" class="auth__error"></span>
+            <input type="text" name="name" id="name__input">
+
+            <label for="last__name__input">Apellidos</label>
+            <span id="sign__up__last__name__error" class="auth__error"></span>
+            <input type="text" name="last_name" id="last__name__input">
+
+            <label for="email__sign__up__input">Correo Electrónico</label>
+            <span id="sign__up__email__error" class="auth__error"></span>
+            <input type="email" name="email" id="email__sign__up__input">
+
+            <label for="password__sign__up__input">Contraseña</label>
+            <span id="sign__up__password__error" class="auth__error"></span>
+            <input type="password" name="password" id="password__sign__up__input">
+
+            <div class="user__extra__info__wrapper">
+                <label>
+                    Teléfono
+                    <input type="number" name="phone" id="phone__input">
+                    <span id="sign__up__phone__error" class="auth__error"></span>
+                </label>
+                <label>
+                    Edad
+                    <input type="number" name="age" id="age__input">
+                    <span id="sign__up__age__error" class="auth__error"></span>
+                </label>
+            </div>
+
+            <input type="submit" class="form__submit" id="sign__up__submit__button" value="Registrarse">
+        </form>
+    </main>
+    <footer>
+        <script src="../../js/index.js" type="module"></script>
+        <script src="../../js/category_loader.js" type="module"></script>
+        <script src="auth_validator.js" type="module"></script>
+    </footer>
+</body>
+</html>

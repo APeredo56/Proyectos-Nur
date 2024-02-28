@@ -1,0 +1,138 @@
+main{
+    background-color: #BCFF97;
+    min-width: 330px;
+    padding-bottom: 30px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    height: unset;
+}
+
+.product__detail__wrapper{
+    padding: 50px 0px;
+    text-align: center;
+}
+
+.product__detail__img__container img{
+    width: 200px;
+}
+
+.product__detail__img__container, .product__detail__info__container{
+    display: inline-block;  
+    margin: 15px 30px;
+    vertical-align: middle;
+}
+
+.product__detail__info__container{
+    width: 45%;
+    min-width: 270px;
+    background-color: #6BF229;
+}
+
+.product__detail__info__wrapper{
+    background-color: #6BF229;
+    text-align: left;
+    padding: 10px;
+    padding-right: 50px;
+    width: 100%;
+}
+
+.product__detail__info__wrapper *{
+    margin-top: 0px;
+}
+
+.product__detail__info__wrapper h1{
+    font-size: 1.6em;
+}
+
+.product__detail__interaction__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.product__amount__selector__container{
+    display: flex;
+    justify-content: center;
+}
+
+.product__detail__amount__wrapper{
+    display: inline-block;
+    background-color: #6BF229;   
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+}
+
+#product__amount__input{
+    width: 80px;
+    text-align: center;
+    font-size: 30px;
+    height: 40px;
+}
+
+.product__amount__selector__button{
+    background-image: linear-gradient(#49D80A, #25670D);
+    border: solid 1px #25670D;
+    padding: 0;
+    margin: 0px 10px;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product__detail__purchase__wrapper{
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    margin: 10px;
+}
+
+.product__purchase__button{
+    display: inline-block;
+    background-image: linear-gradient(#49D80A, #25670D);
+    border: solid 1px #25670D;
+    padding: 5px;
+    width: 100%;
+    margin-top: 10px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.product__description__container{
+    width: 75%;
+    padding: 20px;
+    margin: auto;
+    background-color: #6BF229;
+}
+
+.product__description__container h3{
+    margin-top: 0px;
+}
+
+.product__description__container p{
+    margin: 0px;
+    font-weight: 400;
+}
+
+@media (min-width: 768px){
+    .product__detail__info__container{
+        width: 450px;
+    }
+
+    .product__description__container{
+        max-width: 614px;
+    }
+}
+
+@media (min-width:1024px){
+    .product__detail__img__container img{
+        width: 300px;
+    }
+}

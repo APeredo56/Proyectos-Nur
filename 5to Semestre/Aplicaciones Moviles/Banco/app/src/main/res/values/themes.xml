@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Banco" parent="Theme.MaterialComponents.DayNight">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryDark">@color/red_dark</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionBarStyle"> @style/MyActionBar</item>
+        <item name="android:statusBarColor">@color/red</item>
+<!--        <item name="android:windowActionBarOverlay">true</item>-->
+<!--        <item name="windowActionBarOverlay">true</item>-->
+        <item name="android:windowTitleStyle">@style/TitleBarTextColor</item>
+        <item name="toolbarStyle">@style/CustomToolBarStyle</item>
+
+    </style>
+
+    <style name="Theme.Banco" parent="Base.Theme.Banco" />
+
+    <style name="MyActionBar"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background"  tools:ignore="NewApi">@drawable/red_gradient</item>
+        <item name="background">@drawable/red_gradient</item>
+        <item name="android:titleTextStyle">@style/TitleBarTextColor</item>
+        <item name="titleTextStyle">@style/TitleBarTextColor</item>
+    </style>
+
+    <style name="TitleBarTextColor" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <style name="CustomToolBarStyle" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="titleTextColor">@color/white</item>
+        <item name="subtitleTextColor">@color/white</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:homeAsUpIndicator">@color/white</item>
+    </style>
+
+
+
+</resources>

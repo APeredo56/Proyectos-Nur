@@ -1,0 +1,15 @@
+Proceso Multiplicador
+	Escribir 'Multiplicador';
+	Definir n1 Como Entero;
+	Definir n2 Como Entero;
+	Escribir 'Ingresar dos numeros para multiplicar, el primero debe ser par y el segundo impar';
+	Escribir 'Ingresar el primer numero (par): ';
+	Leer n1;
+	Escribir 'Ingresar el segundo numero (impar): ';
+	Leer n2;
+	Si n1 % 2 = 0 y n2 % 2 <> 0 Entonces
+		Escribir 'Resultado de la multiplicacion: ', n1 * n2;
+	SiNo
+		Escribir 'Los numeros ingresados no corresponden a lo solicitado';
+	FinSi
+FinProceso

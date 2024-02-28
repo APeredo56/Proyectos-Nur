@@ -1,0 +1,22 @@
+
+.banner{
+    padding: 30px 0px 30px 10%;
+}
+.banner h1{
+    margin: 10px 0px 10px;
+    font-size: 3.5em;
+    font-weight: 600;
+    font-family: 'anurati', sans-serif;
+    letter-spacing: 0.1em;
+    line-height: 0.6em;
+}
+
+.banner_slogan{
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 300;
+    font-family: 'centaur', serif;
+    letter-spacing: normal;
+    margin: 10px 0px 0px 30px;
+    overflow: hidden;
+}

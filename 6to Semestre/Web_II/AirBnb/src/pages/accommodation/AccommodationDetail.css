@@ -1,0 +1,38 @@
+.galleryContainer {
+    height: 50vh;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.imageWrapper{
+    flex: 0 0 auto;
+}
+
+.accommodationImage {
+    height: 100%;
+}
+
+.galleryContainer::-webkit-scrollbar {
+    height: 10px;
+}
+
+.galleryContainer::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.galleryContainer::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.galleryContainer::-moz-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.galleryContainer::-moz-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}

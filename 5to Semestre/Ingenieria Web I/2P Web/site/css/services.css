@@ -1,0 +1,28 @@
+
+.services__container{
+    background-color: #f6f6f7;
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.service__item{
+    margin: 20px;
+    min-width: 200px;
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.service__item h3{
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.service__item p{
+    font-size: 14px;
+    font-weight: 14px;
+}

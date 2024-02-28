@@ -1,0 +1,34 @@
+.team-card-w{
+    width: 200px;
+}
+
+.team-card-h{
+    height: 200px;
+}
+
+.fs-add{
+    font-size: 60px;
+}
+
+.modal-dialog .modal-content{
+    border-radius: 1rem;
+    border-color: #7156E5 !important;
+    overflow: hidden;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.float-right{
+    float: right;
+}
+
+.channel-card-w{
+    width: 300px;
+}
+
+.add-channel-card{
+    height: 100px;
+    width: 100px;
+}

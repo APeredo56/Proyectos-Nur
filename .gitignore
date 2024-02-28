@@ -1,0 +1,44 @@
+# Archivos generados por IDEs
+.idea/
+*.iml
+
+# Archivos compilados y generados
+/target/
+*.class
+*.war
+*.ear
+*.jar
+
+# Dependencias de Maven
+/.mvn/
+*.jar
+!/.mvn/wrapper/maven-wrapper.jar
+
+# Dependencias de Gradle
+/.gradle/
+/build/
+
+# Dependencias de Composer
+/vendor/
+composer.phar
+
+# Logs y archivos temporales
+log/
+logs/
+*.log
+*.swp
+*.tmp
+
+# Archivos de configuración local
+.env
+.phpunit.result.cache
+*.sqlite
+
+# Dependencias de Node.js (opcional, para proyectos web)
+node_modules/
+
+# Archivos específicos de Kotlin (si se están utilizando)
+*.kotlin_module
+
+# Archivos específicos de PHP (si se están utilizando)
+*.sqlite3

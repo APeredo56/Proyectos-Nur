@@ -1,0 +1,77 @@
+.about__us__container{
+    text-align: center;
+    margin: 0px;
+    padding: 0px 0px;
+}
+
+.about__message__container {
+    min-width: 250px;
+    margin: 0;
+    display: inline-block;
+    text-align: left;
+    width: 39%;
+    font-weight: 300;
+}
+
+.about__message__container h2{
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.shopping__bag__icons__container {
+    display: inline-block;
+    width: fit-content;
+    margin: 30px 25px 50px;
+}
+
+.shopping__bag__icons__wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    height: 100%;
+}
+
+
+.social__media__container {
+    min-width: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.social__media__container img{
+    margin-right: 20px;
+}
+
+.social__media__container img:last-child{
+    margin-right: 0px;
+}
+
+.shopping__bag__icons__container{
+    height: 125px;
+}
+
+#pink__bag__img{
+    height: 100%;
+}
+
+#small__pink__bag__img{
+    margin-left: 26px;
+    height: 50%;
+}
+
+@media (min-width: 768px){
+    .shopping__bag__icons__container{
+        height: 175px;
+        margin-left: 60px;
+    }
+
+    .about__message__container{
+        margin-top: 50px;
+        font-size: 14px;
+    }
+
+    .about__message__container h2{
+        font-size: 22px;
+    }
+    
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="greater">
+        <form action="#" id="formGreater">
+            <h2>Buscar Mayor entre 3 números</h2>
+            <label for="num1">Primer Número</label>
+            <input type="number" id="num1">
+            <label for="num2">Segundo Número</label>
+            <input type="number" id="num2">
+            <label for="num3">Tercer Número</label>
+            <input type="number" id="num3">
+
+            <input type="submit" name="submitGreater" value="Buscar">
+            
+            <div>
+                <label>Número Mayor :</label>
+                <label id="greaterOutput"></label>
+            </div>
+        </form>
+    </section>
+
+    <section class="even">
+        <form action="#" id="formEvenNumbers">
+            <h2>Obtener n Numeros Pares</h2>
+            <label for="inEvenNumbers">Cantidad de Numeros Pares a mostrar</label>
+            <input type="number" id="inEvenNumbers">
+            <input type="submit" name="submitEven" value="Obtener">
+            <div>
+                <label>Resultado: </label>
+                <label id="lbEvenNumOutput"></label>
+            </div>
+        </form>
+    </section>
+    <section class="fibonacii">
+        <form action="#" id="formFibonacii">
+            <h2>Serie de Fibonacii</h2>
+            <label for="inputFibonacii">Ingrese la longitud de la serie</label>
+            <input type="number" id="inputFibonacii">
+            <input type="submit" value="Obtener">
+            <div>
+                <label>Resultado:</label>
+                <label id="lbFibonaciiOutput"></label>
+            </div>
+        </form>
+    </section>
+    <section class="primeNumbers">
+        <form action="#" id="formPrimeNumbers">
+            <h2>Obtener n Numeros Primos</h2>
+            <label for="inputPrimeNumbers">Ingrese la cantidad de numeros primos</label>
+            <input type="number" id="inputPrimeNumbers">
+            <input type="submit" value="Obtener">
+            <div>
+                <label>Resultado:</label>
+                <label id="lbPrimeNumbersOutput"></label>
+            </div>
+        </form>
+    </section>
+    <section class="factorial">
+        <form action="#" id="formFactorial">
+            <h2>Obtener Factorial de un Numero</h2>
+            <label for="inputFactorial">Ingrese el numero del que desea obtener el factorial</label>
+            <input type="number" id="inputFactorial">
+            <input type="submit" value="Obtener">
+            <div>
+                <label>Resultado:</label>
+                <label id="lbFactorialOutput"></label>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <script src="app.js"></script>
+        <script src="js/greater.js"></script>
+        <script src="js/even.js"></script>
+        <script src="js/fibonacii.js"></script>
+        <script src="js/prime.js"></script>
+        <script src="js/factorial.js"></script>
+    </footer>
+</body>
+</html>

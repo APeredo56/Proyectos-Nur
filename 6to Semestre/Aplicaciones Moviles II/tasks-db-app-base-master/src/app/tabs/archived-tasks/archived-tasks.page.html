@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Archived tasks</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Archived tasks</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <app-task *ngFor="let task of tasks" [task]="task"></app-task>
+</ion-content>

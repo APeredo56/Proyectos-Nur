@@ -1,0 +1,19 @@
+Proceso Resta
+	Escribir 'Resta';
+	Definir n1 Como Real;
+	Definir n2 Como Real;
+	Escribir 'Ingresar dos numeros, el primero mayor a 150 y el segundo debe ser multiplo de 5';
+	Escribir 'Ingresar el primer numero: ';
+	Leer n1;
+	Mientras  n1 < 150 Hacer
+		Escribir 'El numero ingresado es menor a 150, ingresar otro numero: ';
+		Leer n1;
+	FinMientras
+	Escribir 'Ingresar el segundo numero: ';
+	Leer n2;
+	Mientras n2 % 5 <> 0 Hacer
+		Escribir 'El numero ingresado no es multiplo de 5, ingresar otro numero: ';
+		Leer n2;
+	FinMientras
+	Escribir 'Resultado de la resta de los dos numeros: ', n1 - n2;
+FinProceso

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/welcome_section.css">
+    <link rel="stylesheet" href="css/register_section.css">
+    <title>Registro</title>
+</head>
+<body>
+    <main>
+        <section class="welcome__section">
+            <h2>BIENVENIDO</h2>
+            <img src="img/nur_logo.png" alt="Logo Nur">
+            <p>
+                Hola, bienvenido a la Universidad
+            </p>
+            <p>
+                Pronto seras parte de la mejor experiencia de 
+                aprendizaje y desarrollo profesional, junto a una 
+                comunidad que comparte tu mismo interés en el
+                conocimiento.
+            </p>
+            <p>
+                A continuación, registra tus datos para empezar
+                con la experiencia.
+            </p>
+        </section>
+        <section class="register__section">
+            <h2>REGISTRO</h2>
+            <form action="pages/respuesta.html" id="register__form">
+                <label for="input__name">Nombre Completo</label>
+                <input type="text" id="input__name">
+                <span class="error__span" id="error__name"></span>
+
+                <label for="input__email">Correo electrónico</label>
+                <input type="text" id="input__email">
+                <span class="error__span" id="error__email"></span>
+
+                <label for="input__password">Contraseña</label>
+                <input type="password" id="input__password">
+                <span class="error__span" id="error__password"></span>
+
+                <label for="input__password__confirmation">Confirmar contraseña</label>
+                <input type="password" id="input__password__confirmation">
+                <span class="error__span" id="error__password__confirm"></span>
+                
+                <input type="submit" name="submit__button" id="submit__button" value="Registrar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <script src="js/script.js"></script>
+    </footer>
+</body>
+</html>
