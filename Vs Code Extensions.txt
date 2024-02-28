@@ -1,0 +1,46 @@
+AB HTML Formatter
+Android iOS Emulator
+Angular 17 Snippets - TypeScript, Html, Angular
+angular2-inline
+Auto Close Tag
+Auto Complete Tag
+Auto Rename Tag
+Awesome Flutter Snippets
+Better Comments
+Bookmarks
+Bootstrap 4, Font awesome 4, Font Awesome 5 Free & Pro snippets for Visual studio code
+CodeSnap
+Color Highlight
+CSS Formatter
+CSV to Table
+Dart
+ES7+ React/Redux/React-Native snippets
+ESLint
+Excel Viewer
+Flutter
+Git History
+gitignore
+HTML CSS Support
+Indent-Rainbow
+Ionic
+Ionic Snippets
+JSON to TS
+Jupyter
+Jupyter Cell Tags
+Jupyter Keymap
+Renderers for Jupyter Notebooks in Visual Studio Code
+Live Server
+Markdown All in One
+Material Icon Theme
+Output Colorizer
+Paste JSON as Code
+PHP Getters & Setters
+Pylance
+Python
+React Native Tools
+Sass (.sass only)
+SCSS Formatter
+Simple React Snippets
+Terminal in Status Bar
+VSC-Essentials
+XML Tools
