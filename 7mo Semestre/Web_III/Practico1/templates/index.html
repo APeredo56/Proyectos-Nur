@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="banner p-5 text-center d-flex flex-column">
+        <div>
+            <h1 class="text-white">Top 5</h1>
+        </div>
+        <div class="d-flex justify-content-center pb-4">
+            {% for game in top_games %}
+                {% include 'components/icon_object.html' with img_url=game.image title=game.title  destination="game_detail" view="game" object_id=game.id %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container-fluid bg-dark py-3 border-top border-gray border-2 text-center">
+        <div class="d-flex justify-content-center">
+            <h2 class="text-white">Categorías</h2>
+            {% if request.session.is_admin %}
+                <a href="{% url 'category_create' %}" class="btn ms-3 d-flex align-items-center p-0">
+                    <i class="fas fa-plus-circle fs-3 text-success"></i>
+                </a>
+            {% endif %}
+        </div>
+        {% for category in categories %}
+            {% include 'components/icon_object.html' with img_url=category.image title=category.title  destination="category_detail" view="category" object_id=category.id %}
+        {% endfor %}
+    </div>
+{% endblock %}

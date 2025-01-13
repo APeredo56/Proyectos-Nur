@@ -1,0 +1,55 @@
+.banner{
+    background-image: url(/img/banner.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.preview-image{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.preview-image-form{
+    height: 250px;
+}
+
+.h-fit{
+    height: fit-content;
+}
+
+.w-fit{
+    width: fit-content;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.admin-panel-element{
+    height: 65vh;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 5px !important;
+    border-radius: 25px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: rgba(244, 244, 244, 0.089) !important;
+    border-radius: 25px;
+    margin: 0;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(163, 161, 161, 0.89) !important;
+    border-radius: 25px;
+}
+
+.form-block{
+    height: 40vh;
+}
+
+.bg-translucent{
+    background-color: rgba(0, 0, 0, 0.4);
+}

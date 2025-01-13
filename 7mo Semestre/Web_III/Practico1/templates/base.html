@@ -1,0 +1,54 @@
+{% load category_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GamePortal</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static  "css/bootstrap.min.css" %}"/>
+    <link rel="stylesheet" href="{% static  "css/index.css" %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script type="text/javascript" src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+</head>
+<body class="vh-100 d-flex flex-column">
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-3" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">GamePortal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Categorias
+                    </a>
+                    <ul class="dropdown-menu">
+                        {% category_list %}
+                    </ul>
+                </li>
+                {% if not request.session.username %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            {{ request.session.username }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+{% block content %}
+{% endblock %}
+</body>
+</html>

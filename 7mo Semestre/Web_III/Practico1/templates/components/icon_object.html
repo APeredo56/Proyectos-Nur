@@ -1,0 +1,20 @@
+{% load static %}
+<div class="container d-inline-block mt-4 mx-3 icon-figure text-center p-0 position-relative">
+    <figure class="d-inline-block icon-figure text-center">
+        <a href="{% url destination object_id %}">
+            <img src="/{{ img_url|default:'static/img/placeholder.png' }}"
+                 alt="Preview Image" class="w-100 rounded icon-image">
+            <figcaption class="text-white h5 d-inline-block">{{ title }}</figcaption>
+        </a>
+    </figure>
+    {% if request.session.is_admin %}
+        <div class="position-absolute top-0">
+            <a href="{% url view|add:'_edit' object_id %}" class="btn btn-primary btn-sm rounded-circle">
+                <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a href="{% url view|add:'_delete' object_id %}" class="btn btn-danger btn-sm rounded-circle">
+                <i class="fas fa-trash-alt"></i>
+            </a>
+        </div>
+    {% endif %}
+</div>

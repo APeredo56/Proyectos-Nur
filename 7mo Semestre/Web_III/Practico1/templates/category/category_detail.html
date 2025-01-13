@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container-fluid banner p-3 text-center flex-grow-1">
+        <div class="d-flex justify-content-center">
+            <h1 class="text-white">Juegos de {{ category_title }}</h1>
+            {% if request.session.is_admin %}
+                <a href="{% url 'game_create' %}" class="btn ms-3 d-flex align-items-center p-0">
+                    <i class="fas fa-plus-circle fs-3 text-success"></i>
+                </a>
+            {% endif %}
+        </div>
+        {% for game in games %}
+            {% include 'components/icon_object.html' with img_url=game.image title=game.title destination='game_detail' view="game" object_id=game.id %}
+        {% endfor %}
+    </div>
+{% endblock %}

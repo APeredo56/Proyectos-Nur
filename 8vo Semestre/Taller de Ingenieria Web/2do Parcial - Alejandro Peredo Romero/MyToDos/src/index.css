@@ -1,0 +1,21 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+label.error::before {
+  content: '⚠️';
+  margin-right: 5px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.h-fit {
+  height: fit-content;
+}
+
+.w-fit {
+  width: fit-content;
+}

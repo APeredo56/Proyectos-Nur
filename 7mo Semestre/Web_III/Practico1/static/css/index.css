@@ -1,0 +1,56 @@
+.border-gray{
+    border-color: #495057 !important;
+}
+
+.banner{
+    background-image: url(../img/banner.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.mw-25{
+    max-width: 25%;
+}
+
+.icon-figure{
+    width: 200px;
+    max-height: 200px;
+}
+
+.icon-image{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game_image{
+    width: 600px;
+    max-height: 65vh;
+    object-fit: contain;
+}
+
+.image-preview{
+    height: 35vh;
+}
+
+.ratings-container{
+    height: 35vh;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 5px !important;
+    border-radius: 25px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: rgba(244, 244, 244, 0.089) !important;
+    border-radius: 25px;
+    margin: 5px 0;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(163, 161, 161, 0.89) !important;
+    border-radius: 25px;
+}
