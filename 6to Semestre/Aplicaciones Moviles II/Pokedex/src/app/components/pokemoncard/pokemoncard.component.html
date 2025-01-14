@@ -1,0 +1,14 @@
+<div class="pokemon__card__container" 
+  [ngClass]="'bg-' + displayModel.typeDetail[0].type.name">
+  <ion-img src="assets/patterns/Pattern.svg" alt="Pattern" class="img__pattern"></ion-img>
+  <p class="text__number">#{{ displayModel.id.toString().padStart(3, '0') }}</p>
+  <ion-title>{{ displayModel.name | titlecase }}</ion-title>
+  <div class="types__container">
+    <ion-label class="type__badge" *ngFor="let typeDetail of displayModel.typeDetail" 
+      [ngClass]="'color-' + typeDetail.type.name">
+      <ion-icon slot="start" [src]="'assets/icon/type/' + typeDetail.type.name + '.svg'"></ion-icon>
+      {{typeDetail.type.name | titlecase}}
+    </ion-label>
+  </div>
+  <img [src]="baseImageUrl + displayModel.id + '.png'" class="pokemon__image">
+</div>

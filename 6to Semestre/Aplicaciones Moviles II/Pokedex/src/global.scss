@@ -1,0 +1,135 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import '@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+.bg-bug{background-color: #8BD674 !important; --background: #8BD674;}
+.bg-dark{background-color: #6F6E78 !important; --background: #6F6E78;}
+.bg-dragon{background-color: #7383B9 !important; --background: #7383B9;}
+.bg-electric{background-color: #F2CB55 !important; --background: #F2CB55;}
+.bg-fairy{background-color: #EBA8C3 !important; --background: #EBA8C3;}
+.bg-fighting{background-color: #EB4971 !important; --background: #EB4971;}
+.bg-fire{background-color: #FFA756 !important; --background: #FFA756;}
+.bg-flying{background-color: #83A2E3 !important; --background: #83A2E3;}
+.bg-ghost{background-color: #8571BE !important; --background: #8571BE;}
+.bg-grass{background-color: #8BBE8A !important; --background: #8BBE8A;}
+.bg-ground{background-color: #F78551 !important; --background: #F78551;}
+.bg-ice{background-color: #91D8DF !important; --background: #91D8DF;}
+.bg-normal{background-color: #B5B9C4 !important; --background: #B5B9C4;}
+.bg-poison{background-color: #9F6E97 !important; --background: #9F6E97;}
+.bg-psychic{background-color: #FF6568 !important; --background: #FF6568;}
+.bg-rock{background-color: #D4C294 !important; --background: #D4C294;}
+.bg-steel{background-color: #4C91B2 !important; --background: #4C91B2;}
+.bg-water{background-color: #58ABF6 !important; --background: #58ABF6;}
+
+.color-bug{background-color: #8CB230 !important;}
+.color-dark{background-color: #58575F !important;}
+.color-dragon{background-color: #0F6AC0 !important;}
+.color-electric{background-color: #EED535 !important;}
+.color-fairy{background-color: #ED6EC7 !important;}
+.color-fighting{background-color: #D04164 !important;}
+.color-fire{background-color: #FD7D24 !important;}
+.color-flying{background-color: #748FC9 !important;}
+.color-ghost{background-color: #556AAE !important;}
+.color-grass{background-color: #62B957 !important;}
+.color-ground{background-color: #DD7748 !important;}
+.color-ice{background-color: #61CEC0 !important;}
+.color-normal{background-color: #9DA0AA !important;}
+.color-poison{background-color: #A552CC !important;}
+.color-psychic{background-color: #EA5D60 !important;}
+.color-rock{background-color: #BAAB82 !important;}
+.color-steel{background-color: #417D9A !important;}
+.color-water{background-color: #4A90DA !important;}
+
+.font-bug{color: #8CB230 !important;}
+.font-dark{color: #58575F !important;}
+.font-dragon{color: #0F6AC0 !important;}
+.font-electric{color: #EED535 !important;}
+.font-fairy{color: #ED6EC7 !important;}
+.font-fighting{color: #D04164 !important;}
+.font-fire{color: #FD7D24 !important;}
+.font-flying{color: #748FC9 !important;}
+.font-ghost{color: #556AAE !important;}
+.font-grass{color: #62B957 !important;}
+.font-ground{color: #DD7748 !important;}
+.font-ice{color: #61CEC0 !important;}
+.font-normal{color: #9DA0AA !important;}
+.font-poison{color: #A552CC !important;}
+.font-psychic{color: #EA5D60 !important;}
+.font-rock{color: #BAAB82 !important;}
+.font-steel{color: #417D9A !important;}
+.font-water{color: #4A90DA !important;}
+
+input-searchbar {
+    input {
+        --padding-inline-start: 5px !important;
+        --padding-inline-end: 5px !important;
+    }
+}
+
+.text{
+    color: #747476;
+    font-weight: 400;
+    margin: 0;
+}
+
+.text__number{
+    margin: 0;
+    color: #17171B99;
+    font-weight: bold;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+ion-title{
+    padding: 0;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+ion-modal{
+    --border-radius: 30px 30px 0px 0px;
+}
+
+ion-modal .ion-padding{
+    --padding-top: 30px;
+    --padding-start: 30px;
+    --padding-end: 30px;
+    --padding-bottom: 30px;
+}
+
+ion-modal .active{
+    --background: #EA5D60 !important;
+}
+
+ion-button{
+    text-transform: none;
+}
+
+
+
+

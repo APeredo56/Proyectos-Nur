@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true" id="home-page">
+    <ion-img src="assets/img/Pokeball.png" class="pokeball__bg"></ion-img>
+    <div class="main__container">
+      <div class="filters__container">
+        <ion-button fill="clear" id="btnGeneration">
+          <ion-icon slot="icon-only" src="assets/icon/filters/Generation.svg"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" id="btnSort">
+          <ion-icon slot="icon-only" src="assets/icon/filters/Sort.svg"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" id="btnFilter">
+          <ion-icon slot="icon-only" src="assets/icon/filters/Filter.svg"></ion-icon>
+        </ion-button>
+      </div>
+      <div class="display__info__container">
+        <h1>
+          Pokédex
+        </h1>
+        <p class="text">Search for Pokémon by name or using the National Pokédex number.</p>
+        <ion-searchbar class="custom__seachbar" (ionInput)="searchPokemon($event)"
+          placeholder="What Pokémon are you looking for?" [debounce]="500"></ion-searchbar>
+      </div>
+      <ion-list>
+        <app-pokemoncard *ngFor="let pokemon of filteredPokemonPreviews; trackBy: trackByFn" 
+          [displayModel]="pokemon" (click)="goToPokemonDetail(pokemon.id)"></app-pokemoncard>
+      </ion-list>
+      <app-modalgeneration (chosenGeneration)="setGenerationFilter($event)"></app-modalgeneration>
+      <app-modalsort (chosenCriterion)="setSortCriterion($event)"></app-modalsort>
+      <app-modalfilter (chosenFilters)="setPokemonFilters($event)" [initialMaxRange]="pokemonPreviews.length" >
+      </app-modalfilter>
+    </div>
+</ion-content>

@@ -1,0 +1,109 @@
+<div>
+  <p class="text">{{getDescription()}}</p>
+  <h5 [ngClass]="fontClass">Pokédex Data</h5>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="info__header__col">Species</ion-col>
+      <ion-col class="info__parameter text">
+        {{pokemonDetail.species.speciesName[0].name}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="info__header__col">Height</ion-col>
+      <ion-col class="info__parameter text">
+        {{pokemonDetail.height/10}}m<span class="small__text"> ({{getHeightInFeet(pokemonDetail.height/10)}})</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="info__header__col">Weight</ion-col>
+      <ion-col class="info__parameter text">
+        {{pokemonDetail.weight/10}}kg<span class="small__text"> ({{(pokemonDetail.weight/10* 2.20462).toFixed(1)}}lbs)</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="info__header__col">Abilities</ion-col>
+      <ion-col class="text">
+        <div *ngFor="let ability of pokemonDetail.abilities; let i = index">
+          <p class="text" 
+            [ngClass]="{'small__text': ability.is_hidden}">
+            <span *ngIf="!ability.is_hidden">{{i+1+'.'}}</span>{{getFormattedText(ability.ability.name,'-',' ')}}<span *ngIf="ability.is_hidden"> (hidden ability)</span>
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="info__header__col">Weaknesses</ion-col>
+      <ion-col class="text">
+        <ion-icon *ngFor="let weakness of getWeaknesses()" [src]="'assets/icon/type/' + weakness + '.svg'"
+          class="weakness__icon" [ngClass]="getBgClass(weakness)"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h5 [ngClass]="fontClass">Training</h5>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="info__header__col">EV Yield</ion-col>
+      <ion-col class="text">
+        <div *ngFor="let stat of pokemonDetail.stats">
+          <p class="text" *ngIf="stat.effort > 0">{{stat.effort}} {{stat.stat.name | titlecase}}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="info__header__col">Catch Rate</ion-col>
+      <ion-col class="text">
+        {{pokemonDetail.species.capture_rate}}
+        <span class="small__text">({{calculateCatchProbability()}}% with Pokéball, full HP)</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="info__header__col">Base Friendship</ion-col>
+      <ion-col class="text">
+        {{pokemonDetail.species.base_happiness}}
+        <span class="small__text">(normal)</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="info__header__col">Base Exp</ion-col>
+      <ion-col class="text">{{pokemonDetail.base_experience}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="info__header__col">Growth Rate</ion-col>
+      <ion-col class="text">{{getFormattedText(pokemonDetail.species.growthRate.name,'-',' ')}}</ion-col>
+    </ion-row>
+  </ion-grid>
+  <h5 [ngClass]="fontClass">Breeding</h5>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="info__header__col">Gender</ion-col>
+      <ion-col class="text">
+        <span *ngIf="genderRatio.male>0" class="male__range">♀ {{genderRatio.male}}%</span>
+        <span *ngIf="genderRatio.male>0 && genderRatio.female > 0">, </span>
+        <span *ngIf="genderRatio.female>0" class="female__range">♂ {{genderRatio.female}}%</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="info__header__col">Egg Groups</ion-col>
+      <ion-col class="text">{{getEggGroups()}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="info__header__col">Egg Cycles</ion-col>
+      <ion-col class="text">
+        {{pokemonDetail.species.hatch_counter}}<span class="small__text"> ({{getEggCycles()}} steps)</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h5 [ngClass]="fontClass">Location</h5>
+  <ion-grid>
+    <div *ngFor="let dexNumber of pokemonDetail.species.dexnumbers">
+      <ion-row *ngIf="dexNumber.pokedex.version_group.length>0">
+        <ion-col class="info__header__col">
+          {{(dexNumber.pokedex_number+"").padStart(3, '0')}}
+        </ion-col>
+        <ion-col class="text group__version__col">
+          {{getVersionGroups(dexNumber.pokedex.version_group)}}
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-grid>
+</div>

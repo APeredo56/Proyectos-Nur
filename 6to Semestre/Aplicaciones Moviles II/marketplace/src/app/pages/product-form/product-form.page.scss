@@ -1,0 +1,107 @@
+ion-item{
+    --background: var(--ion-color-step-300);
+}
+
+ion-list{
+    margin-bottom: 20px;
+}
+
+ion-button{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+ion-item.ion-untouched:has(ion-input.has-focus)::part(native), 
+ion-item.ion-untouched:has(ion-textarea.has-focus)::part(native){
+    border-bottom: solid 3px;
+    border-bottom-color: var(--ion-color-primary);
+}
+
+ion-item.ion-touched:has(ion-input.ion-invalid)::part(native),
+ion-item.ion-touched:has(ion-textarea.ion-invalid)::part(native){
+    border-bottom: solid 3px;
+    border-bottom-color: var(--ion-color-danger);
+}
+
+ion-item:has(ion-input.ion-valid.has-focus)::part(native),
+ion-item:has(ion-textarea.ion-valid.has-focus)::part(native){
+    border-bottom: solid 3px;
+    border-bottom-color: var(--ion-color-success);
+}
+
+#btn__take__photo, #btn__open__gallery{
+    width: 100%;
+}
+
+#btn__take__photo{
+    margin-right: 10px;
+}
+
+#btn__open__gallery{
+    margin-left: 10px;
+}
+
+ion-img{
+    height: 30vh;
+}
+
+.image__empty__message{
+    padding: 5vw;
+    
+}
+
+swiper-container{
+    background-color: var(--ion-color-step-300);
+    margin: 0;
+}
+
+.btn__delete__image__container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.btn__delete__image, #btnDelete{
+    --color: var(--ion-color-danger);
+}
+
+ion-content{
+    --background: none;
+}
+
+capacitor-google-map {
+    display: inline-block;
+    width: 86vw;
+    height: 40vh;
+}
+
+.main__container{
+    background-color: var(--ion-background-color);
+    padding-bottom: 0;
+    padding-top: 7vw;
+}
+
+.map__container{
+    display: flex;
+}
+
+.map__container__filler{
+    height: 40vh;
+    width: 7vw;
+    background-color: var(--ion-background-color);
+}
+
+ion-list{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.btn__save{
+    margin: 0;
+    padding-bottom: 7vw;
+}
+
+
+
+

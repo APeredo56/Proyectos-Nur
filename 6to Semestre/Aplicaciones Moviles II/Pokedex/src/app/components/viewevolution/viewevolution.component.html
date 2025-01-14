@@ -1,0 +1,32 @@
+<div>
+  <h5 [ngClass]="fontClass">Evolution Chart</h5>
+  <ion-grid>
+    <ion-row *ngFor="let evolution of evolutionDetails; let i = index">
+      <ion-col *ngIf="i!==0">
+        <div class="pokemon__img__container">
+          <ion-img [src]="baseImageUrl + getPreviusEvolution(evolutionDetails[i]).pokemonId + '.png'" class="pokemon__img"></ion-img>
+        </div>
+        <p class="text">#{{(getPreviusEvolution(evolutionDetails[i]).pokemonId+"").padStart(3,'0')}}</p>
+        <p class="bold">{{getPreviusEvolution(evolutionDetails[i]).name | titlecase}}</p>
+      </ion-col>
+      <ion-col *ngIf="i!==0">
+        <ion-icon name="arrow-forward-outline" class="arrow__icon"></ion-icon>
+        <p class="bold evo__trigger__detail">{{getEvolutionTrigger(evolutionDetails[i].evolution[0])}}</p>
+      </ion-col>
+      <ion-col *ngIf="i!==0">
+        <div class="pokemon__img__container">
+          <ion-img [src]="baseImageUrl + evolutionDetails[i].pokemonId + '.png'" class="pokemon__img"></ion-img>
+        </div>
+        <p class="text">#{{(evolutionDetails[i].pokemonId+"").padStart(3,'0')}}</p>
+        <p class="bold">{{evolutionDetails[i].name | titlecase}}</p>
+      </ion-col>
+      <ion-col *ngIf="evolutionDetails.length === 1">
+        <div class="pokemon__img__container">
+          <ion-img [src]="baseImageUrl + evolutionDetails[i].pokemonId + '.png'" class="pokemon__img"></ion-img>
+        </div>
+        <p class="text">#{{(evolutionDetails[i].pokemonId+"").padStart(3,'0')}}</p>
+        <p class="bold">{{evolutionDetails[i].name | titlecase}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

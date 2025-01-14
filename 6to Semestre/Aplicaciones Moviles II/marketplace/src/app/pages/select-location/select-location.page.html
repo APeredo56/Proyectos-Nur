@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Ubicación</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <img src="assets/icon/marker_icon.png" id="centerMarker" alt="marker" />
+  <capacitor-google-map #map id="map"></capacitor-google-map>
+  <ion-range max="150" min="1" [value]="radius" pin="true"
+    (ionChange)="onRadiusChange($event)"></ion-range>
+</ion-content>

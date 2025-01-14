@@ -1,0 +1,53 @@
+[33mcommit 7064400afe1c0648492bbe9c338687a3bd23fac7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Alejandro Peredo <alejandroperedo2013@gmail.com>
+Date:   Sun Sep 24 18:58:26 2023 -0400
+
+    Fixed display issues for android
+
+[33mcommit 7ab68beb5ce731a87857ce4cfc45b68406014d74[m
+Author: Alejandro Peredo <alejandroperedo2013@gmail.com>
+Date:   Thu Sep 21 12:26:22 2023 -0400
+
+    Improved Pokemon Detail Views
+
+[33mcommit 4fb1549a6df48a54d0b079244ccf2365a0ec5d8b[m
+Author: Alejandro Peredo <alejandroperedo2013@gmail.com>
+Date:   Thu Sep 21 01:09:46 2023 -0400
+
+    Finished all functionalities
+
+[33mcommit 22b3826b77c411f102ead9170c91609b52e02631[m
+Author: Alejandro Peredo <alejandroperedo2013@gmail.com>
+Date:   Tue Sep 19 21:19:15 2023 -0400
+
+    Added Locations to About View
+
+[33mcommit 76fa2b6a96e1ce2fbfbb458fd05b0cfa2f493c35[m
+Author: Alejandro Peredo <alejandroperedo2013@gmail.com>
+Date:   Tue Sep 19 18:55:47 2023 -0400
+
+    Added About view on Pokemon Detail page
+
+[33mcommit 862f28df88ab3ccf3aee8f0d84da873a2c7f0470[m
+Author: Alejandro Peredo <alejandroperedo2013@gmail.com>
+Date:   Sun Sep 17 22:47:28 2023 -0400
+
+    Finished home page
+
+[33mcommit 9b9e662fb94d0b9ccda188648704407e1d404b60[m
+Author: Alejandro Peredo <alejandroperedo2013@gmail.com>
+Date:   Sat Sep 16 23:28:08 2023 -0400
+
+    Added Sort and Pokemon filters
+
+[33mcommit 2df785202c69673dcd88c977cf5e81c51c0d44e6[m
+Author: Alejandro Peredo <alejandroperedo2013@gmail.com>
+Date:   Fri Sep 15 18:41:24 2023 -0400
+
+    Creada la interfaz de la pagina principal
+
+[33mcommit 355348b86937e15d719f1f068f49e94233280b14[m
+Author: Alejandro Peredo <alejandroperedo2013@gmail.com>
+Date:   Sun Sep 10 18:24:04 2023 -0400
+
+    Initial commit

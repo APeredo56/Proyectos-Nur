@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{isLogin?"Iniciar Sesión": "Registrarse"}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list lines="full">
+    <div class="method__container">
+      <h3 [class.active]="isLogin" (click)="isLogin = true">Iniciar Sesión</h3>
+      <h3 [class.active]="!isLogin" (click)="isLogin = false">Registrarse</h3>
+    </div> 
+    <ion-item class="auth__error" *ngIf="loginError!=='' && isLogin" lines="none">
+      {{loginError}}
+    </ion-item>
+    <ion-item class="auth__error" *ngIf="registerError!=='' && !isLogin" lines="none">
+      {{registerError}}
+    </ion-item>
+    <form id="login__form" [formGroup]="loginForm" (ngSubmit)="loginUser()" [class.d-none]="!isLogin">
+      <ion-item>
+        <ion-input type="email" placeholder="Ingrese su correo electrónico" formControlName="email"
+          label="Correo electrónico" labelPlacement="stacked"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Ingrese su contraseña" formControlName="password"
+          label="Contraseña" labelPlacement="stacked"></ion-input>
+      </ion-item>
+    </form>
+    <form id="register__form" [formGroup]="registerForm" (ngSubmit)="registerUser()" [class.d-none]="isLogin">
+      <ion-item>
+        <ion-input type="text" placeholder="Ingrese su nombre completo" formControlName="fullname"
+          label="Nombre" labelPlacement="stacked"></ion-input>
+      </ion-item> 
+      <ion-item>
+        <ion-input type="email" placeholder="Ingrese su correo electrónico" formControlName="email"
+          label="Correo electrónico" labelPlacement="stacked"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Ingrese su contraseña" formControlName="password"
+          label="Contraseña" labelPlacement="stacked"></ion-input>
+      </ion-item>
+    </form>
+  </ion-list>
+  <div class="submit__container">
+    <ion-button expand="block" form="login__form" type="submit" *ngIf="isLogin" 
+    [disabled]="!loginForm.valid">
+      Iniciar Sesión
+    </ion-button>
+    <ion-button expand="block" form="register__form" type="submit" *ngIf="!isLogin" 
+    [disabled]="!registerForm.valid">
+      Registrarse
+    </ion-button>
+  </div>
+</ion-content>

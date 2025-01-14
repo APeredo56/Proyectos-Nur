@@ -1,0 +1,58 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [ngClass]="getBgClass()" >
+  
+  <h1 class="background__title">{{pokemonDetail.name | uppercase }}</h1>
+  <ion-grid *ngIf="pokemonDetail.id !== 0">
+    <ion-row>
+      <ion-col id="pokemon__img__container">
+        <ion-img [src]="baseImageUrl + pokemonDetail.id + '.png'" class="pokemon__image"></ion-img>
+      </ion-col>
+      <ion-col id="pokemon__presentation__container">
+        <p class="text__number">#{{ pokemonDetail.id.toString().padStart(3, '0') }}</p>
+        <ion-title class="pokemon__title">{{ pokemonDetail.name | titlecase }}</ion-title>
+        <div class="types__container">
+          <ion-label class="type__badge" *ngFor="let typeDetail of pokemonDetail.typeDetail"
+            [ngClass]="'color-' + typeDetail.type.name">
+            <ion-icon slot="start" [src]="'assets/icon/type/' + typeDetail.type.name + '.svg'"></ion-icon>
+            {{typeDetail.type.name | titlecase}}
+          </ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-icon src="assets/patterns/Pattern_gradient.svg" alt="Pattern" class="img__pattern"></ion-icon>
+  </ion-grid>
+
+  <ion-segment [(ngModel)]="selectedView">
+    <ion-segment-button value="about">
+      <ion-label>About</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="stats">
+      <ion-label>Stats</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="evolution">
+      <ion-label>Evolution</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="pokemon__info__container">
+    <app-viewabout *ngIf="selectedView==='about'" [fontClass]="getFontClass()" [pokemonDetail]="pokemonDetail">
+      About
+    </app-viewabout>
+    <app-viewstats *ngIf="selectedView==='stats'" [fontClass]="getFontClass()" [pokemonName]="pokemonDetail.name"
+      [stats]="pokemonDetail.stats" [typeDetail]="pokemonDetail.typeDetail">
+      Stats
+    </app-viewstats>
+    <app-viewevolution *ngIf="selectedView==='evolution'" 
+      [fontClass]="getFontClass()" [evolutionDetails]="pokemonDetail.species.evolutionChain.evolutionSpecies">
+      Evolution
+    </app-viewevolution>
+  </div>
+    
+</ion-content>

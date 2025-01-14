@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <swiper-container [pagination]="true" >
+    <swiper-slide *ngFor="let image of product?.productimages">
+      <ion-img [src]="baseAPIUrl + image.url"></ion-img>
+    </swiper-slide>
+  </swiper-container>
+  <div class="main__container">
+    <div class="product__info__container" *ngIf="product">
+      <div class="info__section">
+        <h3>{{product.name}}</h3>
+        <h5>{{product.price !== 0? product.price + " Bs": "Gratis"}}</h5>
+      </div>
+      <div class="info__section">
+        <h5>Descripción</h5>
+        <ion-text>
+          {{product.description}}
+        </ion-text>
+      </div>
+      <div class="info__section">
+        <h5>Estado</h5>
+        <ion-text>
+          {{product.status===1? "Disponible": "No disponible"}}
+        </ion-text>
+      </div>
+    </div>
+    <div class="seller__info__container" *ngIf="isLoggedIn && product">
+      <div class="info__section">
+        <h5>Vendedor</h5>
+        <ion-text>
+          {{product.user?.fullname}}
+        </ion-text>
+      </div>
+      <div class="info__section">
+        <h5>Ubicación</h5>
+          <ion-img [src]="getStaticMapUrl()" class="location__img" (click)="openMapsApp()"></ion-img>
+      </div>
+      <ion-button expand="block" (click)="goToChat()">
+        Consultar al Vendedor
+      </ion-button>
+    </div>
+    <div class="login__message" *ngIf="!isLoggedIn">
+      <ion-text>
+        Para realizar una consulta del artículo necesitas iniciar sesión
+      </ion-text>
+      <ion-button expand="block" routerLink="/auth" >
+        Iniciar Sesión
+      </ion-button>
+    </div>
+  </div>
+
+  <div *ngIf="!product">
+    Cargando...
+  </div>
+</ion-content>

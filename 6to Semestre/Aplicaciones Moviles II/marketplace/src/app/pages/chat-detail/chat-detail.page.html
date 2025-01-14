@@ -1,0 +1,69 @@
+<!-- eslint-disable @angular-eslint/template/eqeqeq -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{product?.name}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openInfoModal()">
+        <ion-icon name="information-circle-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button *ngIf="userId == sellerId" expand="full" class="m-0 sell__button" (click)="sellProduct()">
+    {{product?.sold ? 'Producto Vendido' : 'Marcar como Vendido'}}
+  </ion-button>
+  <div class="main__content" #main__content>
+    <ion-list lines="none">
+      <ion-label *ngIf="messages.length === 0" class="ion-text-center">No hay mensajes</ion-label>
+      <div class="msg__container" *ngFor="let message of messages" 
+        [class.own__message__container]="message.user_id_sender == userId">
+        <ion-item [class.own__message]="message.user_id_sender == userId">
+          <ion-label>
+            <h2 class="message__sender__label">
+              {{message.user_id_sender == userId?'Tú': message.user_sender.fullname}}
+            </h2>
+            <ion-label *ngIf="message.type===1">{{message.message}}</ion-label>
+            <ion-img *ngIf="message.type===2" [src]="baseAPIUrl + message.image_url" class="msg__img"
+              (click)="openImageViewModal(baseAPIUrl + message.image_url, 
+              message.user_id_sender == userId?'Tú': message.user_sender.fullname)"></ion-img>
+            <ion-img *ngIf="message.type===3" [src]="getStaticMapUrl(message.latitude!, message.longitude!)" 
+              class="msg__img" (click)="openMapsApp(message.latitude!, message.longitude!)"></ion-img>
+            <p>{{message.createdAt | date:'short'}}</p>
+          </ion-label>
+        </ion-item>
+      </div>
+    </ion-list>
+  </div>
+  <div class="main__footer">
+    <ion-item class="textarea__container" lines="none">
+      <ion-textarea placeholder="Escribe un mensaje" [(ngModel)]="message"
+        autocapitalize="sentences">
+      </ion-textarea>
+      <ion-button slot="end" id="attach__btn" fill="clear" shape="round" (click)="isPopOverOpen=true">
+        <ion-icon name="attach" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-button (click)="sendTextMessage()" fill="clear" class="send__btn" shape="round">
+      <ion-icon name="send" slot="icon-only"></ion-icon>
+    </ion-button>
+  </div>
+  <ion-popover trigger="attach__btn" [isOpen]="isPopOverOpen" side="top" alignment="center">
+    <ng-template>
+      <div class="popover__container">
+        <ion-button shape="round" class="send__btn" (click)="openSendImageModal()">
+          <ion-icon name="image" slot="icon-only"></ion-icon>
+        </ion-button>
+        <ion-label class="popover__label">Imagen</ion-label>
+        <ion-button shape="round" class="send__btn" (click)="goToSendLocationPage()" >
+          <ion-icon name="location" slot="icon-only"></ion-icon>
+        </ion-button>
+        <ion-label>Ubicación</ion-label>
+      </div>
+    </ng-template>
+  </ion-popover>
+</ion-content>

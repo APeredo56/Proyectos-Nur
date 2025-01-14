@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{productId===0?'Mis Chats':'Chats del Producto'}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main__content ion-text-center">
+    <ion-label *ngIf="chats.length===0">No tienes ningún chat</ion-label>
+    <ion-list lines="full">
+      <ion-item *ngFor="let chat of chats" (click)="goToChatDetail(chat)">
+        <ion-badge slot="end">{{getChatNotifications(chat.id)}}</ion-badge>
+        <ion-thumbnail slot="start">
+          <ion-img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg"></ion-img>
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{chat.product.name}}</h2>
+          <p *ngIf="chat.lastMessage.type === 1">{{chat.lastMessage.message}}</p>
+          <p *ngIf="chat.lastMessage.type === 2">Imagen</p>
+          <p *ngIf="chat.lastMessage.type === 3">Ubicación</p>
+          <p>{{chat.lastMessage.createdAt | date:'dd/MM/yyyy HH:mm'}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <div>{{message}}</div>
+  <div class="delete__buttons__container">
+    <ion-button (click)="dismiss(false)" id="btn__cancel">Cancelar</ion-button>
+    <ion-button (click)="dismiss(true)" id="btn__delete">Eliminar</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Enviar Ubicación</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()" [disabled]="!marker">
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <capacitor-google-map #map id="map"></capacitor-google-map>
+</ion-content>

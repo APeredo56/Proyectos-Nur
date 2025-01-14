@@ -1,0 +1,57 @@
+ion-content{
+  --background: white;
+}
+
+.pokeball__bg{
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+.main__container{
+  background-color: white;
+  padding-right: 30px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.filters__container{
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-end;
+  z-index: 1;
+}
+
+.display__info__container{
+  z-index: 1;
+}
+
+ion-button {
+  --padding-start: 5px;
+  --padding-end: 5px;
+}
+
+h1{
+  font-size: 32px;
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: 20px;
+  color: black;
+}
+
+ion-searchbar{
+  color: #747476;
+  padding: 0;
+  --background:#F2F2F2;
+  margin: 20px 0px;
+}
+
+ion-list{
+  background: transparent !important;
+}
+
+

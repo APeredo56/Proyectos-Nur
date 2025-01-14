@@ -1,0 +1,38 @@
+.upload__img__btn{
+    border-radius: 10px;
+    border: solid 1px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+}
+
+ion-content::part(scroll){
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons__container{
+    display: flex;
+    margin-top: 15px;
+}
+
+.buttons__container > ion-button{
+    flex: 1;
+}
+
+#btn__cancel{
+    --background: var(--ion-color-danger);
+    margin-left: 5px;
+}
+
+#btn__send{
+    --background: var(--ion-color-primary);
+    margin-right: 5px;
+}
+
+ion-img{
+    height: 40vh;
+    object-fit: contain;
+}

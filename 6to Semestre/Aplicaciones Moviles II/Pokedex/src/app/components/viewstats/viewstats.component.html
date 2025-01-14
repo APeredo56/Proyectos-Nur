@@ -1,0 +1,96 @@
+<div>
+  <h5 [ngClass]="fontClass">Base Stats</h5>
+  <ion-grid>
+    <ion-col *ngIf="stats.length>0">
+      <ion-row>
+        <ion-col class="info__header__col">HP</ion-col>
+        <ion-col class="text">{{stats[0].base_stat}}</ion-col>
+        <ion-col class="text progress__container" size="6">
+          <ion-progress-bar [value]="stats[0].base_stat / 100" [ngStyle]="{'--progress-background': 'var(--type-' + typeDetail[0].type.name +')'}"></ion-progress-bar>
+        </ion-col>
+        <ion-col class="text">{{utilities.getMinHP(stats[0].base_stat)}}</ion-col>
+        <ion-col class="text">{{utilities.getMaxHP(stats[0].base_stat)}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="info__header__col">Attack</ion-col>
+        <ion-col class="text">{{stats[1].base_stat}}</ion-col>
+        <ion-col class="text progress__container" size="6">
+          <ion-progress-bar [value]="stats[1].base_stat / 100" [ngStyle]="{'--progress-background': 'var(--type-' + typeDetail[0].type.name +')'}"></ion-progress-bar>
+        </ion-col>
+        <ion-col class="text">{{utilities.getMinStat(stats[1].base_stat)}}</ion-col>
+        <ion-col class="text">{{utilities.getMaxStat(stats[1].base_stat)}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="info__header__col">Defense</ion-col>
+        <ion-col class="text">{{stats[2].base_stat}}</ion-col>
+        <ion-col class="text progress__container" size="6">
+          <ion-progress-bar [value]="stats[2].base_stat / 100" [ngStyle]="{'--progress-background': 'var(--type-' + typeDetail[0].type.name +')'}"></ion-progress-bar>
+        </ion-col>
+        <ion-col class="text">{{utilities.getMinStat(stats[2].base_stat)}}</ion-col>
+        <ion-col class="text">{{utilities.getMaxStat(stats[2].base_stat)}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="info__header__col">Sp. Atk</ion-col>
+        <ion-col class="text">{{stats[3].base_stat}}</ion-col>
+        <ion-col class="text progress__container" size="6">
+          <ion-progress-bar [value]="stats[3].base_stat / 100" [ngStyle]="{'--progress-background': 'var(--type-' + typeDetail[0].type.name +')'}"></ion-progress-bar>
+        </ion-col>
+        <ion-col class="text">{{utilities.getMinStat(stats[3].base_stat)}}</ion-col>
+        <ion-col class="text">{{utilities.getMaxStat(stats[3].base_stat)}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="info__header__col">Sp. Def</ion-col>
+        <ion-col class="text">{{stats[4].base_stat}}</ion-col>
+        <ion-col class="text progress__container" size="6">
+          <ion-progress-bar [value]="stats[4].base_stat / 100" [ngStyle]="{'--progress-background': 'var(--type-' + typeDetail[0].type.name +')'}"></ion-progress-bar>
+        </ion-col>
+        <ion-col class="text">{{utilities.getMinStat(stats[4].base_stat)}}</ion-col>
+        <ion-col class="text">{{utilities.getMaxStat(stats[4].base_stat)}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="info__header__col">Speed</ion-col>
+        <ion-col class="text">{{stats[5].base_stat}}</ion-col>
+        <ion-col class="text progress__container" size="6">
+          <ion-progress-bar [value]="stats[5].base_stat / 100" [ngStyle]="{'--progress-background': 'var(--type-' + typeDetail[0].type.name +')'}"></ion-progress-bar>
+        </ion-col>
+        <ion-col class="text">{{utilities.getMinStat(stats[5].base_stat)}}</ion-col>
+        <ion-col class="text">{{utilities.getMaxStat(stats[5].base_stat)}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="info__header__col">Total</ion-col>
+        <ion-col class="text bold">{{getTotalStats()}}</ion-col>
+        <ion-col class="text" size="6"></ion-col>
+        <ion-col class="stat__label">Min</ion-col>
+        <ion-col class="stat__label">Max</ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-grid>
+  <p class="text small__text">The ranges shown on the right are for a level 100 Pokémon. Maximum values are based on a beneficial nature, 252 EVs, 31 IVs; minimum values are based on a hindering nature, 0 EVs, 0 IVs.</p>
+  <h5 [ngClass]="fontClass">Type Defenses</h5>
+  <p class="text">The effectiveness of each Type on {{pokemonName | titlecase}}</p>
+  <ion-grid>
+    <ion-row class="type__defense__row">
+      <ion-col *ngFor="let type of utilities.pokemonTypes" class="type__defense__column">
+        <ion-icon [src]="'assets/icon/type/' + type + '.svg'" class="type__icon" 
+          [ngClass]="getBgClass(type)">
+        </ion-icon>
+        <p [ngSwitch]="utilities.calculateDefense(pokemonTypes, type)" class="text">
+          <ng-container *ngSwitchCase="0">
+            0
+          </ng-container>
+          <ng-container *ngSwitchCase="2">
+            2
+          </ng-container>
+          <ng-container *ngSwitchCase="0.5">
+            ½
+          </ng-container>
+          <ng-container *ngSwitchCase="0.25">
+            ¼
+          </ng-container>
+          <ng-container *ngSwitchDefault>
+          </ng-container>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

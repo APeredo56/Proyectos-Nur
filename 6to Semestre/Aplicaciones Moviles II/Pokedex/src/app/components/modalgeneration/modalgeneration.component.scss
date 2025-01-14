@@ -1,0 +1,39 @@
+ion-title{
+    margin-bottom: 5px;
+}
+ion-grid{
+    margin-top: 35px;
+    padding: 0 !important;
+    text-align: center;
+}
+
+ion-col{
+    padding: 0 !important;
+    text-align: center;
+}
+
+.genBtnContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.genBtn{
+    --background: #F2F2F2 url("../../../assets/patterns/Gen-vector.svg") no-repeat;
+    --background-size: contain;
+    height: 115px;
+    width: 145px;
+    flex-shrink: 0;
+    --border-radius: 10px;
+    margin-bottom: 14px;
+}
+
+p{
+    margin: 0;
+}
+
+.active{
+    --background: #EA5D60 url("../../../assets/patterns/Gen-vector.svg") no-repeat !important;
+}

@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      MarketPlace
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="btnAuth" slot="icon-only" shape="round" routerLink="/auth" *ngIf="!loggedIn">
+        <ion-icon name="person"></ion-icon>
+      </ion-button>
+      <ion-button id="btnLogout" slot="icon-only" shape="round" *ngIf="loggedIn" (click)="logOut()">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-searchbar #mySearchBar placeholder="Buscar producto" *ngIf="searchBarVisible" 
+      (ionBlur)="searchBarVisible=false" [(ngModel)]="searchTerm" debounce="250"></ion-searchbar>
+    <ion-buttons class="center" [class.d-none]="searchBarVisible">
+      <ion-button (click)="showSearchBar()">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/selectLocation">
+        <ion-icon name="compass"></ion-icon>
+      </ion-button>
+      <ion-button id="btnCategories">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+  <div class="main__container">
+    <div *ngFor="let product of productList">
+      <ion-card class="card__container" *ngIf="containsSearchTerm(product)" routerLink="/product/{{product.id}}">
+        <ion-img [src]="baseAPIUrl + product.productimages[0].url"  *ngIf="product.productimages.length > 0"></ion-img>
+        <ion-card-header>
+          <ion-card-subtitle>{{product.price !== 0? product.price + " Bs": "Gratis"}}</ion-card-subtitle>
+          <ion-card-title>{{product.name}}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+
+<app-category-modal [triggerId]="'btnCategories'" (categoryEmitter)="searchWithCategory($event)"></app-category-modal>
+

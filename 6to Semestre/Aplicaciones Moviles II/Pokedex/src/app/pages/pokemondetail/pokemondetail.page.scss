@@ -1,0 +1,118 @@
+ion-header{
+    padding: 20px 20px 0px;
+    --background: transparent;
+    --ion-color-base: transparent;
+    --ion-toolbar-background: transparent; 
+    --ion-toolbar-opacity: 0.8;
+}
+
+ion-back-button{
+    color: white;
+}
+
+ion-toolbar{
+    text-align: center;
+    --background: transparent;
+    color: white;
+}
+
+.background__title{
+    font-size: 100px;
+    font-weight: bold;
+    color: transparent;
+    white-space: nowrap;
+    -webkit-text-stroke: 1px rgba(#FFF, 0.3);
+    font-family: sans-serif;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);    
+}
+
+ion-grid{
+    position: relative;
+    margin: 0px 0px 40px;
+}
+
+#pokemon__img__container{
+    text-align: center;
+    background: url("../../../assets/patterns/Circle.svg") no-repeat center;
+    width: fit-content;
+}
+
+#pokemon__presentation__container{
+    display: grid;
+    align-content: center;
+}
+
+.pokemon__title{
+    color: white;
+}
+
+.type__badge{
+    display: inline-flex;
+    color: white !important;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.type__badge:not(:first-child){
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.type__badge ion-icon{
+    margin-right: 5px;
+    fill: white;
+}
+
+.pokemon__image{
+    width: 115px;
+    height: auto;
+    margin: auto;
+}
+
+.img__pattern{
+    width: 65px;
+    height: 140px;
+    flex-shrink: 0;
+    position: absolute;
+    right: 0;
+    top: 40%;
+    z-index: -1;
+    transform: translateX(45%);
+}
+
+ion-segment-button{
+    --background-checked: url("../../../assets/img/Pokeball_extra_small.svg") no-repeat center top !important;
+    height: 50px;
+    --color: rgba(255, 255, 255, 0.5);
+    --color-checked: white;
+    --indicator-color: transparent;
+    font-size: 16px;
+    text-transform: none;
+}
+
+ion-segment-button.segment-button-checked{
+    font-weight: bold;    
+}
+
+ion-label{
+    margin: 0;
+}
+
+.pokemon__info__container{
+    padding: 25px;
+    background-color: white;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    min-height: 100%;
+    flex: 1;
+}
+
+
+
+
+

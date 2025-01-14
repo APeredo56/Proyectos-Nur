@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">  
+  <ion-toolbar>
+    <ion-title>{{product.name}}</ion-title>
+    <ion-buttons slot="end">
+    <ion-button (click)="dismiss()">
+      <ion-icon name="close-outline" slot="icon-only" color="danger"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <swiper-container [pagination]="true" >
+    <swiper-slide *ngFor="let image of product?.productimages">
+      <ion-img [src]="baseAPIUrl + image.url"></ion-img>
+    </swiper-slide>
+  </swiper-container>
+  <div class="main__container">
+    <div class="product__info__container" *ngIf="product">
+      <div class="info__section">
+        <h3>{{product.price !== 0? product.price + " Bs": "Gratis"}}</h3>
+      </div>
+      <div class="info__section">
+        <h5>Descripción</h5>
+        <ion-text>
+          {{product.description}}
+        </ion-text>
+      </div>
+      <div class="info__section">
+        <h5>Estado</h5>
+        <ion-text>
+          {{product.status===1? "Disponible": "No disponible"}}
+        </ion-text>
+      </div>
+      <div class="info__section">
+        <h5>Ubicación</h5>
+          <ion-img [src]="getStaticMapUrl()" class="location__img"></ion-img>
+      </div>
+    </div>
+  </div>
+</ion-content>

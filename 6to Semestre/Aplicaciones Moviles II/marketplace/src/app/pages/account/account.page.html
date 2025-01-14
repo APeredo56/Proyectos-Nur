@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Mi Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main__container">
+    <ion-list lines="full">
+      <ion-item routerLink="/tabs/account/productList">
+        <ion-label>Mis Productos</ion-label>
+      </ion-item>
+      <ion-item routerLink="/tabs/account/addProduct">
+        <ion-label>Agregar un Producto</ion-label>
+      </ion-item>
+      <ion-item (click)="logOut()">
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

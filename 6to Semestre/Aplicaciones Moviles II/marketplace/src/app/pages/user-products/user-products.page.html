@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/account"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mis Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main__content">
+    <ion-list lines="full">
+      <ion-item *ngFor="let product of products" (click)="goToProductDetail(product.id)">
+        <ion-thumbnail slot="start" *ngIf="product.productimages.length>0">
+          <ion-img [src]="baseAPIUrl + product.productimages[0].url"></ion-img>
+        </ion-thumbnail>
+        <ion-thumbnail slot="start" *ngIf="product.productimages.length===0">
+          <ion-img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg"></ion-img>
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{product.name}}</h2>
+          <p>{{product.description}}</p>
+          <p>{{product.price + ' Bs'}}</p>
+          <ion-button expand="block" (click)="openChat($event, product.id)"
+            (ionClick)="$event.stopPropagation()">Ver Conversaciones</ion-button>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

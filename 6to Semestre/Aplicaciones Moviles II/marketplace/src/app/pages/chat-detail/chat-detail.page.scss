@@ -1,0 +1,128 @@
+.main__content{
+    padding: 5vw 5vw 0;
+    overflow-y: scroll;
+    height: 76vh;
+}
+
+ion-toolbar{
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    min-height: unset;
+}
+
+ion-title{
+    padding: 0;
+}
+
+.sell__button{
+    height: 5vh;
+    min-height: unset;
+}
+
+.main__footer{
+    display: flex;
+    background-color: var(--ion-background-color);
+    width: 100%;
+    height: 11vh;
+    align-items: center;
+}
+
+.msg__container{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+ion-list{
+    padding: 0;
+    margin: 0;
+    background-color: transparent !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.msg__container ion-item{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    --background: var(--ion-color-step-100);
+}
+
+.own__message__container{
+    justify-content: flex-end !important;
+}
+
+.own__message{
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    --background: var(--ion-color-step-350) !important;
+}
+
+.msg__img::part(image){
+    max-height: 25vh;
+    width: auto;
+}
+
+ion-textarea{
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+}
+
+ion-button.send__btn{
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    --padding-end: 10px;
+    --padding-start: 10px;
+    height: fit-content;
+    --background: var(--ion-toolbar-background);
+    --color: var(--ion-text-color);
+    margin: 0 5px;
+}
+
+ion-button#attach__btn{
+    --padding-top: 5px;
+    --padding-bottom: 5px;
+    --padding-end: 5px;
+    --padding-start: 5px;
+    color: var(--ion-toolbar-background);
+    margin: 0;
+}
+
+.textarea__container::part(native), .textarea__container{
+    width: 100%;
+    height: 100%;    
+    padding: 1vw;
+}
+
+.textarea__container::part(native) {
+    border: solid 1px;
+    border-radius: 10px;
+    border-color: var(--ion-color-step-300);
+}
+
+.textarea__container{
+    --inner-padding-end: 0px;
+    --background: var(--ion-color-step-100);
+}
+
+.message__sender__label{
+    color: var(--ion-toolbar-background);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.popover__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+ion-popover{
+    --width: fit-content;
+}
+
+.popover__label{
+    margin-bottom: 10px;
+}

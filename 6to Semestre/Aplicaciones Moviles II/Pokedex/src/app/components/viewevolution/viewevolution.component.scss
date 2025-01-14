@@ -1,0 +1,33 @@
+h5{
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+
+ion-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pokemon__img__container{
+    background-image: url("../../../assets/img/Pokeball.png");
+    background-size: contain;
+    background-position: center;
+    width: fit-content;
+    padding: 13px;
+}
+
+.pokemon__img{
+    width: 75px;
+}
+
+.arrow__icon{
+    color: rgba(0.4, 0.4, 0.4, 0.3);
+    font-size: 35px;
+}
+
+.evo__trigger__detail{
+    color: black;
+}

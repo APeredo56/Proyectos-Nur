@@ -1,0 +1,29 @@
+.main__container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 7vw;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card__container{
+  width: 40vw;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-none{
+  display: none;
+}
+
+#btnAuth, #btnLogout{
+  --background: var(--ion-color-step-100);
+  --padding-start: 7px;
+  --padding-end: 7px;
+}

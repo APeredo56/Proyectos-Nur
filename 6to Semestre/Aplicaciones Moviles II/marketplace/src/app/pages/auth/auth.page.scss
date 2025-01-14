@@ -1,0 +1,62 @@
+ion-item{
+    --background: var(--ion-color-step-300);
+}
+
+ion-list{
+    padding-top: 0;
+}
+
+.method__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    padding: 0;
+}
+
+.method__container h3{
+    width: 100%;
+    height: 100%;
+    padding: 15px 0;
+    margin: 0;
+    text-align: center;
+    background-color: var(--background);
+}
+
+.active{
+    background-color: var(--ion-item-background) !important;
+}
+
+.submit__container{
+    margin-top: 20px;
+}
+
+ion-button{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.d-none{
+    display: none;
+}
+
+ion-item.ion-untouched:has(ion-input.has-focus)::part(native){
+    border-bottom: solid 3px;
+    border-bottom-color: var(--ion-color-primary);
+}
+
+ion-item.ion-touched:has(ion-input.ion-invalid)::part(native){
+    border-bottom: solid 3px;
+    border-bottom-color: var(--ion-color-danger);
+}
+
+ion-item:has(ion-input.ion-valid.has-focus)::part(native){
+    border-bottom: solid 3px;
+    border-bottom-color: var(--ion-color-success);
+}
+
+.auth__error{
+    color: var(--ion-color-danger);
+}
+
+

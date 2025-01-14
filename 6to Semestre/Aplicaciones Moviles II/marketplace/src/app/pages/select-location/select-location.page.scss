@@ -1,0 +1,63 @@
+.expand{
+    height: 100%;
+}
+
+ion-title{
+    text-align: center;
+}
+
+ion-range{
+    --bar-background: var(--ion-item-background);
+    --bar-background-active: var(--ion-background-color);
+    --bar-height: 4px;
+    --knob-size: 20px;
+    --knob-background: var(--ion-text-color);
+    --bar-border-radius: 20px;
+    --knob-box-shadow: 0px 0px 0px 5px var(--ion-background-color);
+    padding-top: 0;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+ion-range::part(pin) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent !important;
+    color: var(--ion-background-color);
+    font-size: large;
+    font-weight: bold;
+    transform: scale(1.01);
+    bottom: -30px;
+    min-width: 28px;
+    height: 28px;
+}
+
+ion-range::part(pin)::before {
+    content: none;
+}
+
+capacitor-google-map {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#centerMarker{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // transform: translate(-50%, -90%);
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    z-index: 9999;
+}
+
+ion-content{
+    --background: transparent;
+}

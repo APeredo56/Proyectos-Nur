@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Enviar Imagen</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <div class="upload__img__btn" (click)="openGallery()" *ngIf="imageUrl===''">
+    Escoger Imagen
+  </div>
+  <ion-img [src]="imageUrl" alt="Imagen a enviar" *ngIf="imageUrl!==''"></ion-img>
+  <div class="buttons__container">
+    <ion-button (click)="cancel()" id="btn__cancel">Cancelar</ion-button>
+    <ion-button (click)="confirm()" id="btn__send" [disabled]="imageUrl===''">Enviar</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,18 @@
+.delete__buttons__container{
+    display: flex;
+    margin-top: 15px;
+}
+
+.delete__buttons__container > ion-button{
+    flex: 1;
+}
+
+#btn__delete{
+    --background: var(--ion-color-danger);
+    margin-left: 5px;
+}
+
+#btn__cancel{
+    --background: var(--ion-color-primary);
+    margin-right: 5px;
+}

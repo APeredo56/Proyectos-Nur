@@ -1,0 +1,24 @@
+<ion-modal [trigger]="triggerId">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Categorias</ion-title>
+        <ion-buttons slot="start">
+          <ion-button (click)="cancel()">
+            <ion-icon name="close"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list lines="full" class="rounded">
+        <ion-item (click)="selectCategory(0)">
+          <ion-label>Mostrar Todo</ion-label>
+        </ion-item>
+        <ion-item *ngFor="let category of categories" (click)="selectCategory(category.id)">
+          <ion-label>{{category.name}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-modal>
